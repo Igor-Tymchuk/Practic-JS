@@ -1,0 +1,169 @@
+// Завдання 1: Пошук об'єктів з кількома умовами
+// Напишіть функцію findObjectsWithConditions, яка приймає масив об'єктів та об'єкт умов, і повертає всі об'єкти, які задовольняють усім умовам.
+
+let products = [
+    { id: 1, name: "Laptop", category: "Electronics", price: 1000 },
+    { id: 2, name: "Phone", category: "Electronics", price: 500 },
+    { id: 3, name: "Shirt", category: "Clothing", price: 50 },
+    { id: 4, name: "Shoes", category: "Clothing", price: 100 }
+];
+
+function findObjectsWithConditions(array, conditions) {
+    // Ваш код тут
+}
+
+console.log(findObjectsWithConditions(products, { category: "Electronics", price: 500 }));
+
+// Завдання 2: Створення об'єкта з групуванням і підрахунком
+// Напишіть функцію groupAndCountByProperty, яка приймає масив об'єктів та назву властивості, і повертає об'єкт, де ключі - це унікальні значення властивості, а значення - кількість об'єктів з цими значеннями.
+
+let animals = [
+    { id: 1, type: "Dog", name: "Buddy" },
+    { id: 2, type: "Cat", name: "Kitty" },
+    { id: 3, type: "Dog", name: "Max" },
+    { id: 4, type: "Bird", name: "Tweety" }
+];
+
+function groupAndCountByProperty(array, property) {
+    // Ваш код тут
+}
+
+console.log(groupAndCountByProperty(animals, "type"));
+
+// Завдання 3: Перетворення масиву об'єктів у дерево
+// Напишіть функцію buildTree, яка приймає масив об'єктів з ієрархією id та parentId, і повертає дерево об'єктів.
+
+let items = [
+    { id: 1, name: "Electronics", parentId: null },
+    { id: 2, name: "Laptops", parentId: 1 },
+    { id: 3, name: "Phones", parentId: 1 },
+    { id: 4, name: "Gaming Laptops", parentId: 2 },
+    { id: 5, name: "Smartphones", parentId: 3 }
+];
+
+function buildTree(array) {
+    // Ваш код тут
+}
+
+console.log(JSON.stringify(buildTree(items), null, 2));
+
+// Завдання 4: Знаходження найпопулярнішого елемента
+// Напишіть функцію findMostFrequent, яка приймає масив об'єктів та назву властивості, і повертає значення цієї властивості, яке зустрічається найчастіше.
+
+let votes = [
+    { voterId: 1, candidate: "Alice" },
+    { voterId: 2, candidate: "Bob" },
+    { voterId: 3, candidate: "Alice" },
+    { voterId: 4, candidate: "Bob" },
+    { voterId: 5, candidate: "Alice" }
+];
+
+function findMostFrequent(array, property) {
+    // Ваш код тут
+}
+
+console.log(findMostFrequent(votes, "candidate"));
+
+// Завдання 5: Злиття двох масивів об'єктів
+// Напишіть функцію mergeArrays, яка приймає два масиви об'єктів та об'єднує їх в один масив, при цьому якщо об'єкти мають однаковий id, вони повинні бути об'єднані.
+
+let array1 = [
+    { id: 1, name: "John" },
+    { id: 2, name: "Jane" }
+];
+let array2 = [
+    { id: 1, age: 30 },
+    { id: 3, name: "Mike" }
+];
+
+function mergeArrays(arr1, arr2) {
+    // Ваш код тут
+}
+
+console.log(mergeArrays(array1, array2));
+
+// Завдання 6: Рекурсивне видалення об'єктів
+// Напишіть функцію removeObjectsByProperty, яка приймає масив об'єктів та назву властивості, і рекурсивно видаляє всі об'єкти з цією властивістю.
+
+let data = [
+    { id: 1, value: "A", children: [{ id: 2, value: "B", children: [{ id: 3, value: "C" }] }] },
+    { id: 4, value: "D", children: [{ id: 5, value: "E" }] }
+];
+
+function removeObjectsByProperty(array, property, value) {
+    // Ваш код тут
+}
+
+console.log(removeObjectsByProperty(data, "value", "B"));
+
+// Завдання 7: Перевірка циклічності об'єктів
+// Напишіть функцію hasCycle, яка приймає масив об'єктів з ієрархією id та parentId, і повертає true, якщо є циклічні залежності, інакше false.
+
+let nodes = [
+    { id: 1, parentId: null },
+    { id: 2, parentId: 1 },
+    { id: 3, parentId: 2 },
+    { id: 4, parentId: 3 },
+    { id: 5, parentId: 4 },
+    { id: 6, parentId: 5 },
+    { id: 7, parentId: 3 }
+];
+
+function hasCycle(array) {
+    // Ваш код тут
+}
+
+console.log(hasCycle(nodes));
+
+// Завдання 8: Знаходження всіх шляхів у дереві
+// Напишіть функцію findAllPaths, яка приймає масив об'єктів з ієрархією id та parentId, і повертає всі можливі шляхи від кореня до листя у вигляді масиву масивів.
+
+let tree = [
+    { id: 1, parentId: null },
+    { id: 2, parentId: 1 },
+    { id: 3, parentId: 1 },
+    { id: 4, parentId: 2 },
+    { id: 5, parentId: 2 },
+    { id: 6, parentId: 3 }
+];
+
+function findAllPaths(array) {
+    // Ваш код тут
+}
+
+console.log(findAllPaths(tree));
+
+// Завдання 9: Перетворення масиву об'єктів на об'єкт з вкладеними об'єктами
+// Напишіть функцію convertToObject, яка приймає масив об'єктів, де кожен об'єкт має key та value, і повертає один об'єкт, де ключі - це значення key, а значення - це відповідні значення value.
+
+let pairs = [
+    { key: "name", value: "John" },
+    { key: "age", value: 30 },
+    { key: "city", value: "New York" }
+];
+
+function convertToObject(array) {
+    // Ваш код тут
+}
+
+console.log(convertToObject(pairs));
+
+// Завдання 10: Перетворення об'єктів з масивами в об'єкти з вкладеними об'єктами
+// Напишіть функцію flattenObject, яка приймає об'єкт, де значенням деяких властивостей є масиви об'єктів, і перетворює їх на вкладені об'єкти, використовуючи властивість id.
+
+let complexObject = {
+    users: [
+        { id: 1, name: "John" },
+        { id: 2, name: "Jane" }
+    ],
+    posts: [
+        { id: 101, title: "Post 1", userId: 1 },
+        { id: 102, title: "Post 2", userId: 2 }
+    ]
+};
+
+function flattenObject(obj) {
+    // Ваш код тут
+}
+
+console.log(flattenObject(complexObject));
