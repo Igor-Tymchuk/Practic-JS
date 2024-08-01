@@ -1,0 +1,153 @@
+// Завдання 1: Пошук об'єкта за властивістю
+// Напишіть функцію findObjectByProperty, яка приймає масив об'єктів та значення властивості, та повертає перший об'єкт, що містить це значення.
+
+let items = [
+    { id: 1, name: "Apple", category: "Fruit" },
+    { id: 2, name: "Carrot", category: "Vegetable" },
+    { id: 3, name: "Banana", category: "Fruit" }
+];
+
+function findObjectByProperty(array, property, value) {
+    // Ваш код тут
+}
+
+console.log(findObjectByProperty(items, "name", "Banana"));
+
+// Завдання 2: Підрахунок елементів з певною властивістю
+// Напишіть функцію countByProperty, яка приймає масив об'єктів та значення властивості, та повертає кількість об'єктів, що містять це значення.
+
+let users = [
+    { id: 1, name: "John", role: "admin" },
+    { id: 2, name: "Jane", role: "user" },
+    { id: 3, name: "Mike", role: "user" },
+    { id: 4, name: "Sara", role: "admin" }
+];
+
+function countByProperty(array, property, value) {
+    // Ваш код тут
+}
+
+console.log(countByProperty(users, "role", "user"));
+
+// Завдання 3: Фільтрація об'єктів за властивістю
+// Напишіть функцію filterByProperty, яка приймає масив об'єктів та значення властивості, та повертає новий масив, що містить об'єкти з цим значенням.
+
+let books = [
+    { id: 1, title: "The Hobbit", author: "Tolkien", genre: "Fantasy" },
+    { id: 2, title: "1984", author: "Orwell", genre: "Dystopian" },
+    { id: 3, title: "The Lord of the Rings", author: "Tolkien", genre: "Fantasy" }
+];
+
+function filterByProperty(array, property, value) {
+    // Ваш код тут
+}
+
+console.log(filterByProperty(books, "author", "Tolkien"));
+
+// Завдання 4: Перетворення масиву об'єктів
+// Напишіть функцію mapToProperty, яка приймає масив об'єктів та назву властивості, та повертає новий масив значень цієї властивості з кожного об'єкта.
+
+let products = [
+    { id: 1, name: "Laptop", price: 1000 },
+    { id: 2, name: "Phone", price: 500 },
+    { id: 3, name: "Tablet", price: 300 }
+];
+
+function mapToProperty(array, property) {
+    // Ваш код тут
+}
+
+console.log(mapToProperty(products, "name"));
+
+// Завдання 5: Групування об'єктів за властивістю
+// Напишіть функцію groupByProperty, яка приймає масив об'єктів та назву властивості, та повертає об'єкт, де ключі - це унікальні значення цієї властивості, а значення - масиви об'єктів з цими значеннями.
+
+let students = [
+    { id: 1, name: "Alice", grade: "A" },
+    { id: 2, name: "Bob", grade: "B" },
+    { id: 3, name: "Charlie", grade: "A" },
+    { id: 4, name: "David", grade: "C" }
+];
+
+function groupByProperty(array, property) {
+    // Ваш код тут
+}
+
+console.log(groupByProperty(students, "grade"));
+
+// Завдання 6: Обчислення суми властивостей
+// Напишіть функцію sumProperty, яка приймає масив об'єктів та назву числової властивості, та повертає суму значень цієї властивості.
+
+let orders = [
+    { id: 1, product: "Laptop", quantity: 2, price: 1000 },
+    { id: 2, product: "Phone", quantity: 5, price: 500 },
+    { id: 3, product: "Tablet", quantity: 3, price: 300 }
+];
+
+function sumProperty(array, property) {
+    // Ваш код тут
+}
+
+console.log(sumProperty(orders, "price"));
+
+// Завдання 7: Перетворення об'єктів у вигляд ключ-значення
+// Напишіть функцію convertToKeyValue, яка приймає масив об'єктів та назви двох властивостей, та повертає об'єкт, де ключі - значення однієї властивості, а значення - значення іншої властивості.
+
+let employees = [
+    { id: 1, name: "Emma", department: "HR" },
+    { id: 2, name: "Liam", department: "IT" },
+    { id: 3, name: "Olivia", department: "Finance" }
+];
+
+function convertToKeyValue(array, keyProp, valueProp) {
+    // Ваш код тут
+}
+
+console.log(convertToKeyValue(employees, "id", "name"));
+
+// Завдання 8: Оновлення значень властивостей об'єктів
+// Напишіть функцію updatePropertyValues, яка приймає масив об'єктів, назву властивості та нове значення цієї властивості, та оновлює цю властивість для всіх об'єктів у масиві.
+
+let accounts = [
+    { id: 1, username: "user1", status: "active" },
+    { id: 2, username: "user2", status: "inactive" },
+    { id: 3, username: "user3", status: "active" }
+];
+
+function updatePropertyValues(array, property, newValue) {
+    // Ваш код тут
+}
+
+updatePropertyValues(accounts, "status", "inactive");
+console.log(accounts);
+
+// Завдання 9: Перевірка наявності властивості
+// Напишіть функцію hasProperty, яка приймає масив об'єктів та назву властивості, та повертає true, якщо всі об'єкти містять цю властивість, інакше false.
+
+let records = [
+    { id: 1, name: "Alice", age: 25 },
+    { id: 2, name: "Bob", age: 30 },
+    { id: 3, name: "Charlie", age: 35 }
+];
+
+function hasProperty(array, property) {
+    // Ваш код тут
+}
+
+console.log(hasProperty(records, "age"));
+console.log(hasProperty(records, "address"));
+
+// Завдання 10: Пошук максимального значення властивості
+// Напишіть функцію findMaxProperty, яка приймає масив об'єктів та назву числової властивості, та повертає об'єкт з максимальним значенням цієї властивості.
+
+let scores = [
+    { id: 1, name: "Team A", score: 100 },
+    { id: 2, name: "Team B", score: 200 },
+    { id: 3, name: "Team C", score: 150 }
+];
+
+function findMaxProperty(array, property) {
+    // Ваш код тут
+}
+
+console.log(findMaxProperty(scores, "score"));
