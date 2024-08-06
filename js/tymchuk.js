@@ -45,3 +45,50 @@ function findObjectByProperty(array, property, value) {
 }
 
 // console.log(findObjectByProperty(items, "category", "Vegetable"));
+
+// Завдання 10
+// Напишіть функцію getNamesByAge, яка повертає масив імен з масиву об'єктів, де значення поля age більше або дорівнює 30.
+
+const people = [
+    { name: 'Alice', age: 30 },
+    { name: 'Bob', age: 25 },
+    { name: 'Charlie', age: 35 },
+    { name: 'David', age: 40 }
+];
+
+function getNamesByAge(arr, age) {
+    const names = [];
+    for (const profile of arr) {
+        if (profile.age >= age) {
+            names.push(profile.name);
+        }
+    }
+    return names;
+}
+
+// Перевірка
+// console.log(getNamesByAge(people, 30)); // Очікуваний результат: ['Alice', 'Charlie', 'David']
+// console.log(getNamesByAge(people, 10)); // Очікуваний результат: ['Alice', 'Charlie', 'David']
+// console.log(getNamesByAge(people, 36)); // Очікуваний результат: ['Alice', 'Charlie', 'David']
+// console.log(getNamesByAge(people, 80)); // Очікуваний результат: ['Alice', 'Charlie', 'David']
+
+// Завдання 7: Перетворення об'єктів у вигляд ключ-значення
+// Напишіть функцію convertToKeyValue, яка приймає масив об'єктів та назви двох властивостей, та повертає об'єкт, де ключі - значення однієї властивості, а значення - значення іншої властивості.
+
+let employees = [
+    { id: 1, name: "Emma", department: "HR" },
+    { id: 2, name: "Liam", department: "IT" },
+    { id: 3, name: "Olivia", department: "Finance" }
+];
+
+function convertToKeyValue(array, keyProp, valueProp) {
+    const newObject = {};
+    for (const employer of array) {
+        newObject[employer[keyProp]] = employer[valueProp];
+    }
+    return newObject;
+}
+
+// console.log(convertToKeyValue(employees, "department", "name"));
+// console.log(convertToKeyValue(employees, "id", "name"));
+
