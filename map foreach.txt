@@ -1,0 +1,88 @@
+Завдання 1
+Напишіть функцію doubleAges, яка подвоює значення поля age для кожного об'єкта в масиві об'єктів.
+
+javascript
+Копіювати код
+const people = [
+  { name: 'Alice', age: 30 },
+  { name: 'Bob', age: 25 },
+  { name: 'Charlie', age: 35 }
+];
+
+function doubleAges(arr) {
+  // Ваша реалізація тут
+}
+
+// Перевірка
+console.log(doubleAges(people)); // [{ name: 'Alice', age: 60 }, { name: 'Bob', age: 50 }, { name: 'Charlie', age: 70 }]
+Завдання 2
+Напишіть функцію getNames, яка створює масив імен з масиву об'єктів.
+
+javascript
+Копіювати код
+const people = [
+  { name: 'Alice', age: 30 },
+  { name: 'Bob', age: 25 },
+  { name: 'Charlie', age: 35 }
+];
+
+function getNames(arr) {
+  // Ваша реалізація тут
+}
+
+// Перевірка
+console.log(getNames(people)); // ['Alice', 'Bob', 'Charlie']
+Завдання 3
+Напишіть функцію increaseSalaries, яка збільшує зарплату на 10% для кожного об'єкта в масиві об'єктів.
+
+javascript
+Копіювати код
+const employees = [
+  { name: 'John', salary: 5000 },
+  { name: 'Jane', salary: 6000 },
+  { name: 'Jack', salary: 5500 }
+];
+
+function increaseSalaries(arr) {
+  // Ваша реалізація тут
+}
+
+// Перевірка
+console.log(increaseSalaries(employees)); // [{ name: 'John', salary: 5500 }, { name: 'Jane', salary: 6600 }, { name: 'Jack', salary: 6050 }]
+Завдання 4
+Напишіть функцію logProductNames, яка виводить назви продуктів у консоль для кожного об'єкта в масиві об'єктів.
+
+javascript
+Копіювати код
+const products = [
+  { product: 'Apple', price: 1.2 },
+  { product: 'Banana', price: 0.5 },
+  { product: 'Cherry', price: 2.0 }
+];
+
+function logProductNames(arr) {
+  // Ваша реалізація тут
+}
+
+// Перевірка
+logProductNames(products); // 'Apple', 'Banana', 'Cherry'
+Завдання 5
+Напишіть функцію addBookYears, яка додає кількість років (від currentYear) до кожної книги та повертає новий масив об'єктів.
+
+javascript
+Копіювати код
+const books = [
+  { title: 'The Great Gatsby', year: 1925 },
+  { title: '1984', year: 1949 },
+  { title: 'To Kill a Mockingbird', year: 1960 }
+];
+
+const currentYear = 2024;
+
+function addBookYears(arr) {
+  // Ваша реалізація тут
+}
+
+// Перевірка
+console.log(addBookYears(books)); // [{ title: 'The Great Gatsby', year: 2024 - 1925 }, { title: '1984', year: 2024 - 1949 }, { title: 'To Kill a Mockingbird', year: 2024 - 1960 }]
+Ці задачі допоможуть вам практикуватися у використанні методів map та forEach для обробки масивів об'єктів.

@@ -1,0 +1,190 @@
+Завдання 1
+Напишіть функцію totalCost, яка обчислює загальну вартість товарів у масиві об'єктів, де кожен об'єкт має поля item і cost.
+
+javascript
+Копіювати код
+const items = [
+  { item: 'Laptop', cost: 1200 },
+  { item: 'Mouse', cost: 25 },
+  { item: 'Keyboard', cost: 50 }
+];
+
+function totalCost(arr) {
+  // Ваша реалізація тут
+}
+
+// Перевірка
+console.log(totalCost(items)); // Очікуваний результат: 1275
+Завдання 2
+Напишіть функцію countByCategory, яка рахує кількість об'єктів у масиві, які належать до кожної категорії, де кожен об'єкт має поля name і category.
+
+javascript
+Копіювати код
+const products = [
+  { name: 'Apple', category: 'Fruit' },
+  { name: 'Banana', category: 'Fruit' },
+  { name: 'Carrot', category: 'Vegetable' },
+  { name: 'Broccoli', category: 'Vegetable' },
+  { name: 'Orange', category: 'Fruit' }
+];
+
+function countByCategory(arr) {
+  // Ваша реалізація тут
+}
+
+// Перевірка
+console.log(countByCategory(products)); // Очікуваний результат: { Fruit: 3, Vegetable: 2 }
+Завдання 3
+Напишіть функцію findHighestCost, яка знаходить товар з найвищою вартістю в масиві об'єктів, де кожен об'єкт має поля item і cost.
+
+javascript
+Копіювати код
+const items = [
+  { item: 'Laptop', cost: 1200 },
+  { item: 'Mouse', cost: 25 },
+  { item: 'Keyboard', cost: 50 }
+];
+
+function findHighestCost(arr) {
+  // Ваша реалізація тут
+}
+
+// Перевірка
+console.log(findHighestCost(items)); // Очікуваний результат: { item: 'Laptop', cost: 1200 }
+Завдання 4
+Напишіть функцію concatNames, яка об’єднує всі значення поля name з масиву об'єктів в один рядок, розділений комами.
+
+javascript
+Копіювати код
+const people = [
+  { name: 'Alice', age: 30 },
+  { name: 'Bob', age: 25 },
+  { name: 'Charlie', age: 35 }
+];
+
+function concatNames(arr) {
+  // Ваша реалізація тут
+}
+
+// Перевірка
+console.log(concatNames(people)); // Очікуваний результат: 'Alice, Bob, Charlie'
+Завдання 5
+Напишіть функцію filterByAge, яка повертає масив об'єктів, де значення поля age більше або дорівнює 30.
+
+javascript
+Копіювати код
+const people = [
+  { name: 'Alice', age: 30 },
+  { name: 'Bob', age: 25 },
+  { name: 'Charlie', age: 35 }
+];
+
+function filterByAge(arr) {
+  // Ваша реалізація тут
+}
+
+// Перевірка
+console.log(filterByAge(people)); // Очікуваний результат: [{ name: 'Alice', age: 30 }, { name: 'Charlie', age: 35 }]
+Ці задачі дозволять вам практикуватися в переборі масиву об'єктів за допомогою циклу for...of.
+
+
+
+
+
+ще 5 задач
+ChatGPT
+Ось ще п’ять задач для практики з використанням циклу for...of:
+
+Завдання 6
+Напишіть функцію getUniqueCategories, яка повертає масив унікальних категорій з масиву об'єктів, де кожен об'єкт має поле category.
+
+javascript
+Копіювати код
+const items = [
+  { name: 'Apple', category: 'Fruit' },
+  { name: 'Banana', category: 'Fruit' },
+  { name: 'Carrot', category: 'Vegetable' },
+  { name: 'Broccoli', category: 'Vegetable' },
+  { name: 'Orange', category: 'Fruit' },
+  { name: 'Lettuce', category: 'Vegetable' }
+];
+
+function getUniqueCategories(arr) {
+  // Ваша реалізація тут
+}
+
+// Перевірка
+console.log(getUniqueCategories(items)); // Очікуваний результат: ['Fruit', 'Vegetable']
+Завдання 7
+Напишіть функцію averageAge, яка обчислює середній вік з масиву об'єктів, де кожен об'єкт має поле age.
+
+javascript
+Копіювати код
+const people = [
+  { name: 'Alice', age: 30 },
+  { name: 'Bob', age: 25 },
+  { name: 'Charlie', age: 35 },
+  { name: 'David', age: 40 }
+];
+
+function averageAge(arr) {
+  // Ваша реалізація тут
+}
+
+// Перевірка
+console.log(averageAge(people)); // Очікуваний результат: 32.5
+Завдання 8
+Напишіть функцію findShortestName, яка знаходить об'єкт з найкоротшим значенням поля name в масиві об'єктів.
+
+javascript
+Копіювати код
+const people = [
+  { name: 'Alice', age: 30 },
+  { name: 'Bob', age: 25 },
+  { name: 'Charlie', age: 35 },
+  { name: 'David', age: 40 }
+];
+
+function findShortestName(arr) {
+  // Ваша реалізація тут
+}
+
+// Перевірка
+console.log(findShortestName(people)); // Очікуваний результат: { name: 'Bob', age: 25 }
+Завдання 9
+Напишіть функцію sumCostsByCategory, яка обчислює загальну вартість товарів для кожної категорії в масиві об'єктів, де кожен об'єкт має поля item, cost і category. Поверніть об'єкт, де ключами є категорії, а значеннями - загальна вартість товарів в кожній категорії.
+
+javascript
+Копіювати код
+const items = [
+  { item: 'Laptop', cost: 1200, category: 'Electronics' },
+  { item: 'Mouse', cost: 25, category: 'Electronics' },
+  { item: 'Carrot', cost: 3, category: 'Groceries' },
+  { item: 'Broccoli', cost: 2, category: 'Groceries' }
+];
+
+function sumCostsByCategory(arr) {
+  // Ваша реалізація тут
+}
+
+// Перевірка
+console.log(sumCostsByCategory(items)); // Очікуваний результат: { Electronics: 1225, Groceries: 5 }
+Завдання 10
+Напишіть функцію getNamesByAge, яка повертає масив імен з масиву об'єктів, де значення поля age більше або дорівнює 30.
+
+javascript
+Копіювати код
+const people = [
+  { name: 'Alice', age: 30 },
+  { name: 'Bob', age: 25 },
+  { name: 'Charlie', age: 35 },
+  { name: 'David', age: 40 }
+];
+
+function getNamesByAge(arr) {
+  // Ваша реалізація тут
+}
+
+// Перевірка
+console.log(getNamesByAge(people)); // Очікуваний результат: ['Alice', 'Charlie', 'David']
+Ці задачі допоможуть вам додатково попрактикуватися в переборі масиву об'єктів за допомогою циклу for...of.

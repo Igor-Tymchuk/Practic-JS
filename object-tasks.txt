@@ -64,7 +64,7 @@ console.log(mapToProperty(products, "name"));
 
 let students = [
     { id: 1, name: "Alice", grade: "A" },
-    { id: 2, name: "Bob", grade: "B" },
+    { id: 2, name: "Bob", grade: "B" }, 
     { id: 3, name: "Charlie", grade: "A" },
     { id: 4, name: "David", grade: "C" }
 ];

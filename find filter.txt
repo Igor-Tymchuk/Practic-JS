@@ -1,0 +1,88 @@
+Ось п’ять задач для практики з використанням методів find та filter:
+
+Завдання 1
+Напишіть функцію findYoungestPerson, яка знаходить об'єкт з найменшим значенням поля age у масиві об'єктів.
+
+javascript
+Копіювати код
+const people = [
+  { name: 'Alice', age: 30 },
+  { name: 'Bob', age: 25 },
+  { name: 'Charlie', age: 35 }
+];
+
+function findYoungestPerson(arr) {
+  // Ваша реалізація тут
+}
+
+// Перевірка
+console.log(findYoungestPerson(people)); // { name: 'Bob', age: 25 }
+Завдання 2
+Напишіть функцію filterAdults, яка фільтрує масив об'єктів, залишаючи тільки ті об'єкти, де значення поля age більше або дорівнює 18.
+
+javascript
+Копіювати код
+const people = [
+  { name: 'Alice', age: 30 },
+  { name: 'Bob', age: 17 },
+  { name: 'Charlie', age: 35 }
+];
+
+function filterAdults(arr) {
+  // Ваша реалізація тут
+}
+
+// Перевірка
+console.log(filterAdults(people)); // [{ name: 'Alice', age: 30 }, { name: 'Charlie', age: 35 }]
+Завдання 3
+Напишіть функцію findExpensiveProduct, яка знаходить перший об'єкт з масиву, де значення поля price перевищує 100.
+
+javascript
+Копіювати код
+const products = [
+  { product: 'Laptop', price: 1500 },
+  { product: 'Phone', price: 600 },
+  { product: 'Charger', price: 20 }
+];
+
+function findExpensiveProduct(arr) {
+  // Ваша реалізація тут
+}
+
+// Перевірка
+console.log(findExpensiveProduct(products)); // { product: 'Laptop', price: 1500 }
+Завдання 4
+Напишіть функцію filterBooksByYear, яка фільтрує масив об'єктів, залишаючи тільки ті книги, рік видання яких більший за 1950.
+
+javascript
+Копіювати код
+const books = [
+  { title: 'The Great Gatsby', year: 1925 },
+  { title: '1984', year: 1949 },
+  { title: 'To Kill a Mockingbird', year: 1960 }
+];
+
+function filterBooksByYear(arr) {
+  // Ваша реалізація тут
+}
+
+// Перевірка
+console.log(filterBooksByYear(books)); // [{ title: 'To Kill a Mockingbird', year: 1960 }]
+Завдання 5
+Напишіть функцію findEmployeeByName, яка знаходить об'єкт з масиву за ім'ям.
+
+javascript
+Копіювати код
+const employees = [
+  { name: 'John', position: 'Manager' },
+  { name: 'Jane', position: 'Developer' },
+  { name: 'Jack', position: 'Designer' }
+];
+
+function findEmployeeByName(arr, name) {
+  // Ваша реалізація тут
+}
+
+// Перевірка
+console.log(findEmployeeByName(employees, 'Jane')); // { name: 'Jane', position: 'Developer' }
+Ці задачі допоможуть вам практикуватися в використанні методів find та filter для роботи з масивами об'єктів.

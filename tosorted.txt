@@ -1,0 +1,95 @@
+Завдання 1
+Напишіть функцію sortObjectsByAge, яка відсортовує масив об'єктів за полем age у порядку зростання.
+
+javascript
+Копіювати код
+const people1 = [
+  { name: 'Alice', age: 30 },
+  { name: 'Bob', age: 25 },
+  { name: 'Charlie', age: 35 }
+];
+
+const people2 = [
+  { name: 'Tom', age: 50 },
+  { name: 'Jerry', age: 40 }
+];
+
+// Перевірка
+console.log(sortObjectsByAge(people1));
+console.log(sortObjectsByAge(people2));
+Завдання 2
+Напишіть функцію sortObjectsByName, яка відсортовує масив об'єктів за полем name у алфавітному порядку.
+
+javascript
+Копіювати код
+const people3 = [
+  { name: 'Charlie', age: 30 },
+  { name: 'Alice', age: 25 },
+  { name: 'Bob', age: 35 }
+];
+
+const people4 = [
+  { name: 'Tom', age: 50 },
+  { name: 'Jerry', age: 40 }
+];
+
+// Перевірка
+console.log(sortObjectsByName(people3));
+console.log(sortObjectsByName(people4));
+Завдання 3
+Напишіть функцію sortProductsByPrice, яка відсортовує масив об'єктів за полем price у порядку зростання.
+
+javascript
+Копіювати код
+const products1 = [
+  { product: 'Apple', price: 1.2 },
+  { product: 'Banana', price: 0.5 },
+  { product: 'Cherry', price: 2.0 }
+];
+
+const products2 = [
+  { product: 'Milk', price: 1.5 },
+  { product: 'Bread', price: 1.0 }
+];
+
+// Перевірка
+console.log(sortProductsByPrice(products1));
+console.log(sortProductsByPrice(products2));
+Завдання 4
+Напишіть функцію sortEmployeesBySalary, яка відсортовує масив об'єктів за полем salary у порядку зростання.
+
+javascript
+Копіювати код
+const employees1 = [
+  { name: 'John', department: 'HR', salary: 5000 },
+  { name: 'Jane', department: 'Finance', salary: 6000 },
+  { name: 'Jack', department: 'IT', salary: 5500 }
+];
+
+const employees2 = [
+  { name: 'Anna', department: 'Marketing', salary: 4500 },
+  { name: 'Tom', department: 'Sales', salary: 4700 }
+];
+
+// Перевірка
+console.log(sortEmployeesBySalary(employees1));
+console.log(sortEmployeesBySalary(employees2));
+Завдання 5
+Напишіть функцію sortBooksByYear, яка відсортовує масив об'єктів за полем year у порядку зростання.
+
+javascript
+Копіювати код
+const books1 = [
+  { title: 'The Great Gatsby', year: 1925 },
+  { title: '1984', year: 1949 },
+  { title: 'To Kill a Mockingbird', year: 1960 }
+];
+
+const books2 = [
+  { title: 'Moby Dick', year: 1851 },
+  { title: 'Pride and Prejudice', year: 1813 }
+];
+
+// Перевірка
+console.log(sortBooksByYear(books1));
+console.log(sortBooksByYear(books2));

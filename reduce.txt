@@ -1,0 +1,96 @@
+Ось п’ять задач для практики з використанням методу reduce:
+
+Завдання 1
+Напишіть функцію sumAges, яка обчислює суму значень поля age для всіх об'єктів в масиві.
+
+javascript
+Копіювати код
+const people = [
+  { name: 'Alice', age: 30 },
+  { name: 'Bob', age: 25 },
+  { name: 'Charlie', age: 35 }
+];
+
+function sumAges(arr) {
+  // Ваша реалізація тут
+}
+
+// Перевірка
+console.log(sumAges(people)); // 90
+Завдання 2
+Напишіть функцію totalPrice, яка обчислює загальну суму значень поля price для всіх об'єктів в масиві.
+
+javascript
+Копіювати код
+const products = [
+  { product: 'Laptop', price: 1500 },
+  { product: 'Phone', price: 600 },
+  { product: 'Charger', price: 20 }
+];
+
+function totalPrice(arr) {
+  // Ваша реалізація тут
+}
+
+// Перевірка
+console.log(totalPrice(products)); // 2120
+Завдання 3
+Напишіть функцію concatenateNames, яка об’єднує всі значення поля name з масиву об'єктів в один рядок, розділений комами.
+
+javascript
+Копіювати код
+const people = [
+  { name: 'Alice', age: 30 },
+  { name: 'Bob', age: 25 },
+  { name: 'Charlie', age: 35 }
+];
+
+function concatenateNames(arr) {
+  // Ваша реалізація тут
+}
+
+// Перевірка
+console.log(concatenateNames(people)); // 'Alice, Bob, Charlie'
+Завдання 4
+Напишіть функцію countOccurrences, яка рахує кількість об'єктів в масиві, де значення певного поля дорівнює заданому значенню.
+
+javascript
+Копіювати код
+const items = [
+  { type: 'fruit', name: 'Apple' },
+  { type: 'vegetable', name: 'Carrot' },
+  { type: 'fruit', name: 'Banana' },
+  { type: 'fruit', name: 'Orange' }
+];
+
+function countOccurrences(arr, type) {
+  // Ваша реалізація тут
+}
+
+// Перевірка
+console.log(countOccurrences(items, 'fruit')); // 3
+console.log(countOccurrences(items, 'vegetable')); // 1
+Завдання 5
+Напишіть функцію groupByCategory, яка групує об'єкти в масиві за певним полем і повертає об'єкт, де ключами є значення цього поля, а значеннями - масиви об'єктів, що мають ці значення.
+
+javascript
+Копіювати код
+const items = [
+  { category: 'fruit', name: 'Apple' },
+  { category: 'vegetable', name: 'Carrot' },
+  { category: 'fruit', name: 'Banana' },
+  { category: 'fruit', name: 'Orange' },
+  { category: 'vegetable', name: 'Lettuce' }
+];
+
+function groupByCategory(arr) {
+  // Ваша реалізація тут
+}
+
+// Перевірка
+console.log(groupByCategory(items));
+// {
+//   fruit: [{ category: 'fruit', name: 'Apple' }, { category: 'fruit', name: 'Banana' }, { category: 'fruit', name: 'Orange' }],
+//   vegetable: [{ category: 'vegetable', name: 'Carrot' }, { category: 'vegetable', name: 'Lettuce' }]
+// }
+Ці задачі допоможуть вам практикуватися в використанні методу reduce для обробки масивів об'єктів.
