@@ -1,15 +1,15 @@
 // Кількість парних чисел в масиві
 // Напишіть функцію countEvenNumbers, яка приймає масив чисел і повертає кількість парних чисел у масиві.
 
-function countEvenNumbers(arr) {
-    let counter = 0;
-    for (const number of arr) {
-        if (number % 2 === 0) {
-            counter += 1;
-        }
-    }
-    return counter;
-}
+// function countEvenNumbers(arr) {
+//     let counter = 0;
+//     for (const number of arr) {
+//         if (number % 2 === 0) {
+//             counter += 1;
+//         }
+//     }
+//     return counter;
+// }
 
 // Перевірка
 // console.log(countEvenNumbers([10, 21, 32, 43])); // 2
@@ -21,11 +21,11 @@ function countEvenNumbers(arr) {
 // Завдання 1: Пошук об'єкта за властивістю
 // Напишіть функцію findObjectByProperty, яка приймає масив об'єктів та значення властивості, та повертає перший об'єкт, що містить це значення.
 
-let items = [
-    { id: 1, name: "Apple", category: "Fruit" },
-    { id: 2, name: "Carrot", category: "Vegetable" },
-    { id: 3, name: "Banana", category: "Fruit" }
-];
+// let items = [
+//     { id: 1, name: "Apple", category: "Fruit" },
+//     { id: 2, name: "Carrot", category: "Vegetable" },
+//     { id: 3, name: "Banana", category: "Fruit" }
+// ];
 // function findObjectByProperty(array, property, value) {
 // for (let i = 0; i < array.length; i += 1) {
 //     console.log("i:", i)
@@ -35,36 +35,36 @@ let items = [
 // }
 // return null;
 // }
-function findObjectByProperty(array, property, value) {
-    for (const item of array) {
-        if (item[property] === value) {
-            return item;
-        }
-    }
-    return null;
-}
+// function findObjectByProperty(array, property, value) {
+//     for (const item of array) {
+//         if (item[property] === value) {
+//             return item;
+//         }
+//     }
+//     return null;
+// }
 
 // console.log(findObjectByProperty(items, "category", "Vegetable"));
 
 // Завдання 10
 // Напишіть функцію getNamesByAge, яка повертає масив імен з масиву об'єктів, де значення поля age більше або дорівнює 30.
 
-const people = [
-    { name: 'Alice', age: 30 },
-    { name: 'Bob', age: 25 },
-    { name: 'Charlie', age: 35 },
-    { name: 'David', age: 40 }
-];
+// const people = [
+//     { name: 'Alice', age: 30 },
+//     { name: 'Bob', age: 25 },
+//     { name: 'Charlie', age: 35 },
+//     { name: 'David', age: 40 }
+// ];
 
-function getNamesByAge(arr, age) {
-    const names = [];
-    for (const profile of arr) {
-        if (profile.age >= age) {
-            names.push(profile.name);
-        }
-    }
-    return names;
-}
+// function getNamesByAge(arr, age) {
+//     const names = [];
+//     for (const profile of arr) {
+//         if (profile.age >= age) {
+//             names.push(profile.name);
+//         }
+//     }
+//     return names;
+// }
 
 // Перевірка
 // console.log(getNamesByAge(people, 30)); // Очікуваний результат: ['Alice', 'Charlie', 'David']
@@ -75,20 +75,127 @@ function getNamesByAge(arr, age) {
 // Завдання 7: Перетворення об'єктів у вигляд ключ-значення
 // Напишіть функцію convertToKeyValue, яка приймає масив об'єктів та назви двох властивостей, та повертає об'єкт, де ключі - значення однієї властивості, а значення - значення іншої властивості.
 
-let employees = [
-    { id: 1, name: "Emma", department: "HR" },
-    { id: 2, name: "Liam", department: "IT" },
-    { id: 3, name: "Olivia", department: "Finance" }
+// let employees = [
+//     { id: 1, name: "Emma", department: "HR" },
+//     { id: 2, name: "Liam", department: "IT" },
+//     { id: 3, name: "Olivia", department: "Finance" }
+// ];
+
+// function convertToKeyValue(array, keyProp, valueProp) {
+//     const newObject = {};
+//     for (const employer of array) {
+//         newObject[employer[keyProp]] = employer[valueProp];
+//     }
+//     return newObject;
+// }
+
+// // console.log(convertToKeyValue(employees, "department", "name"));
+// // console.log(convertToKeyValue(employees, "id", "name"));
+
+// // Завдання 1
+// // Напишіть функцію doubleAges, яка подвоює значення поля age для кожного об'єкта в масиві об'єктів.
+
+// const peoples = [
+//     { name: 'Alice', age: 30 },
+//     { name: 'Bob', age: 25 },
+//     { name: 'Charlie', age: 35 }
+// ];
+
+// function doubleAges(arr) {
+// const double = arr.slice();
+// double.forEach(elem => elem.age *2);
+// return double;
+// }
+
+// Перевірка
+// console.log(doubleAges(peoples)); // [{ name: 'Alice', age: 60 }, { name: 'Bob', age: 50 }, { name: 'Charlie', age: 70 }]
+// Завдання 5
+// Напишіть функцію addBookYears, яка додає кількість років (від currentYear) до кожної книги та повертає новий масив об'єктів.
+
+// const books = [
+//   { title: 'The Great Gatsby', year: 1925 },
+//   { title: '1984', year: 1949 },
+//   { title: 'To Kill a Mockingbird', year: 1960 }
+// ];
+
+// const currentYear = 2024;
+
+// function addBookYears(arr) {
+// const newArray = arr.slice();
+// newArray.forEach(book => book.year = currentYear + " - " + book.year);
+// return newArray;
+// }
+
+// // Перевірка
+// console.log(addBookYears(books)); // [{ title: 'The Great Gatsby', year: 2024 - 1925 }, { title: '1984', year: 2024 - 1949 }, { title: 'To Kill a Mockingbird', year: 2024 - 1960 }]
+
+// Завдання 5
+// Напишіть функцію groupByCategory, яка групує об'єкти в масиві за певним полем і повертає об'єкт, де ключами є значення цього поля, а значеннями - масиви об'єктів, що мають ці значення.
+
+// const items = [
+//   { category: 'fruit', name: 'Apple' },
+//   { category: 'vegetable', name: 'Carrot' },
+//   { category: 'fruit', name: 'Banana' },
+//   { category: 'fruit', name: 'Orange' },
+//   { category: 'vegetable', name: 'Lettuce' }
+// ];
+
+// const groupByCategory = arr => {
+//   return arr.reduce((acc, item) => {
+//     const key = item.category;
+//     if (!acc[key]) {
+//         acc[key] = [];
+//     }
+//     acc[key].push(item);
+//     return acc
+//   }, {})
+
+
+// }
+
+// // Перевірка
+// console.log(groupByCategory(items));
+// // {
+//   fruit: [{ category: 'fruit', name: 'Apple' }, { category: 'fruit', name: 'Banana' }, { category: 'fruit', name: 'Orange' }],
+//   vegetable: [{ category: 'vegetable', name: 'Carrot' }, { category: 'vegetable', name: 'Lettuce' }]
+// }
+
+// Завдання 4
+// Напишіть функцію countOccurrences, яка рахує кількість об'єктів в масиві, де значення певного поля дорівнює заданому значенню.
+
+// const items = [
+//   { type: 'fruit', name: 'Apple' },
+//   { type: 'vegetable', name: 'Carrot' },
+//   { type: 'fruit', name: 'Banana' },
+//   { type: 'fruit', name: 'Orange' }
+// ];
+
+// const countOccurrences = (arr, type) => {
+//   return arr.reduce((counter, item) => {
+//     if (item.type === type) counter++;
+//     return counter;
+//   }, 0)
+// }
+
+// // Перевірка
+// console.log(countOccurrences(items, 'fruit')); // 3
+// console.log(countOccurrences(items, 'vegetable')); // 1
+
+// Задача 2
+// Дан массив объектов orders, где каждый объект содержит идентификатор заказа, массив товаров (название и количество) и статус заказа. Получите массив названий всех товаров из выполненных заказов, отсортированный по алфавиту.
+
+const orders = [
+    { id: 1, products: [{ name: "Laptop", quantity: 1 }, { name: "Mouse", quantity: 2 }], status: "completed" },
+    { id: 2, products: [{ name: "Phone", quantity: 1 }, { name: "Headphones", quantity: 1 }], status: "pending" },
+    { id: 3, products: [{ name: "Tablet", quantity: 2 }, { name: "Charger", quantity: 3 }], status: "completed" }
 ];
 
-function convertToKeyValue(array, keyProp, valueProp) {
-    const newObject = {};
-    for (const employer of array) {
-        newObject[employer[keyProp]] = employer[valueProp];
-    }
-    return newObject;
-}
+const completedProducts = array => array.filter(item => item.status === "completed")
+.flatMap(item => item.products)
+.map(item => item.name)
+.toSorted((a, b) => a.localeCompare(b));
 
-// console.log(convertToKeyValue(employees, "department", "name"));
-// console.log(convertToKeyValue(employees, "id", "name"));
+console.log("completedProducts:", completedProducts(orders))
 
+
+// Пример консоль лога: ["Charger", "Laptop", "Mouse", "Tablet"]
