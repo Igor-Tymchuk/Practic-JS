@@ -149,3 +149,41 @@
 
 // // Перевірка
 // console.log(increaseSalaries(employees)); // [{ name: 'John', salary: 5500 }, { name: 'Jane', salary: 6600 }, { name: 'Jack', salary: 6050 }]
+
+// Завдання 5
+// Напишіть функцію addBookYears, яка додає кількість років (від currentYear) до кожної книги та повертає новий масив об'єктів.
+
+// javascript
+// Копіювати код
+// const books = [
+//   { title: 'The Great Gatsby', year: 1925 },
+//   { title: '1984', year: 1949 },
+//   { title: 'To Kill a Mockingbird', year: 1960 }
+// ];
+
+// const currentYear = 2024;
+
+// const addBookYears = arr => {
+//     return arr.map(item => ({
+//         ...item,
+//         year: currentYear + ' - ' + item.year
+//     }))
+// }
+
+// // Перевірка
+// console.log(addBookYears(books)); // [{ title: 'The Great Gatsby', year: 2024 - 1925 }, { title: '1984', year: 2024 - 1949 }, { title: 'To Kill a Mockingbird', year: 2024 - 1960 }]
+
+// Завдання 4
+// Напишіть функцію logProductNames, яка виводить назви продуктів у консоль для кожного об'єкта в масиві об'єктів.
+
+// javascript
+// Копіювати код
+// const products = [
+//   { product: 'Apple', price: 1.2 },
+//   { product: 'Banana', price: 0.5 },
+//   { product: 'Cherry', price: 2.0 }
+// ];
+
+// const logProductNames = arr => arr.map(item => `'${item.product}'`).join(', ')
+// // Перевірка
+// console.log(logProductNames(products));// 'Apple', 'Banana', 'Cherry'

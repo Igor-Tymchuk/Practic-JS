@@ -1,0 +1,193 @@
+1. Задачи на метод map
+Задача 1
+У вас есть массив объектов products, где каждый объект содержит информацию о товаре (название, цена, категория). Преобразуйте этот массив так, чтобы получить новый массив, состоящий только из названий товаров.
+
+javascript
+Копировать код
+const products = [
+  { name: "Laptop", price: 1500, category: "Electronics" },
+  { name: "Shoes", price: 100, category: "Clothing" },
+  { name: "Coffee Machine", price: 200, category: "Home Appliances" }
+];
+
+// Пример консоль лога: ["Laptop", "Shoes", "Coffee Machine"]
+Задача 2
+Дан массив объектов employees, каждый объект содержит имя сотрудника и его заработную плату. Верните массив, где к каждому значению заработной платы добавлен 10% бонус.
+
+javascript
+Копировать код
+const employees = [
+  { name: "John", salary: 3000 },
+  { name: "Jane", salary: 4000 },
+  { name: "Jack", salary: 3500 }
+];
+
+// Пример консоль лога: [{name: "John", salary: 3300}, {name: "Jane", salary: 4400}, {name: "Jack", salary: 3850}]
+Задача 3
+У вас есть массив объектов students, где каждый объект содержит имя студента и массив его оценок. Преобразуйте этот массив, чтобы получить массив средних оценок для каждого студента.
+
+javascript
+Копировать код
+const students = [
+  { name: "Alice", grades: [90, 85, 88] },
+  { name: "Bob", grades: [72, 75, 78] },
+  { name: "Charlie", grades: [95, 92, 90] }
+];
+
+// Пример консоль лога: [87.67, 75, 92.33]
+2. Задачи на метод flatMap
+Задача 1
+Дан массив объектов orders, где каждый объект представляет собой заказ с массивом товаров. Верните единый массив, содержащий названия всех товаров.
+
+javascript
+Копировать код
+const orders = [
+  { orderId: 1, products: ["Laptop", "Mouse"] },
+  { orderId: 2, products: ["Phone", "Headphones"] },
+  { orderId: 3, products: ["Tablet", "Charger"] }
+];
+
+// Пример консоль лога: ["Laptop", "Mouse", "Phone", "Headphones", "Tablet", "Charger"]
+Задача 2
+Есть массив объектов categories, каждый из которых содержит название категории и массив подкатегорий. Верните единый массив со всеми названиями подкатегорий.
+
+javascript
+Копировать код
+const categories = [
+  { category: "Electronics", subcategories: ["Laptops", "Phones"] },
+  { category: "Clothing", subcategories: ["Men", "Women"] },
+  { category: "Home", subcategories: ["Furniture", "Kitchen"] }
+];
+
+// Пример консоль лога: ["Laptops", "Phones", "Men", "Women", "Furniture", "Kitchen"]
+Задача 3
+Дан массив объектов teams, каждый объект содержит имя команды и массив игроков. Верните массив, содержащий имена всех игроков из всех команд.
+
+javascript
+Копировать код
+const teams = [
+  { team: "Team A", players: ["Alice", "Bob"] },
+  { team: "Team B", players: ["Charlie", "David"] },
+  { team: "Team C", players: ["Eve", "Frank"] }
+];
+
+// Пример консоль лога: ["Alice", "Bob", "Charlie", "David", "Eve", "Frank"]
+3. Задачи на метод filter
+Задача 1
+У вас есть массив объектов movies, где каждый объект содержит название фильма и его рейтинг. Верните массив фильмов с рейтингом выше 8.
+
+javascript
+Копировать код
+const movies = [
+  { title: "Inception", rating: 8.8 },
+  { title: "Titanic", rating: 7.8 },
+  { title: "The Dark Knight", rating: 9.0 }
+];
+
+// Пример консоль лога: [{title: "Inception", rating: 8.8}, {title: "The Dark Knight", rating: 9.0}]
+Задача 2
+Дан массив объектов books, каждый объект содержит название книги и количество страниц. Верните массив книг, количество страниц в которых превышает 300.
+
+javascript
+Копировать код
+const books = [
+  { title: "1984", pages: 328 },
+  { title: "The Great Gatsby", pages: 180 },
+  { title: "War and Peace", pages: 1225 }
+];
+
+// Пример консоль лога: [{title: "1984", pages: 328}, {title: "War and Peace", pages: 1225}]
+Задача 3
+Дан массив объектов users, каждый объект содержит имя пользователя и его возраст. Верните массив пользователей, которым больше 18 лет.
+
+javascript
+Копировать код
+const users = [
+  { name: "Alice", age: 17 },
+  { name: "Bob", age: 20 },
+  { name: "Charlie", age: 15 }
+];
+
+// Пример консоль лога: [{name: "Bob", age: 20}]
+4. Задачи на метод forEach
+Задача 1
+Дан массив объектов students, каждый объект содержит имя студента и его баллы за экзамен. Напечатайте в консоль имя и баллы каждого студента.
+
+javascript
+Копировать код
+const students = [
+  { name: "Alice", score: 85 },
+  { name: "Bob", score: 92 },
+  { name: "Charlie", score: 78 }
+];
+
+// Пример консоль лога: 
+// Alice: 85
+// Bob: 92
+// Charlie: 78
+Задача 2
+У вас есть массив объектов tasks, где каждый объект содержит название задачи и статус (выполнена или нет). Напечатайте в консоль все невыполненные задачи.
+
+javascript
+Копировать код
+const tasks = [
+  { title: "Buy groceries", completed: true },
+  { title: "Clean the house", completed: false },
+  { title: "Pay bills", completed: false }
+];
+
+// Пример консоль лога: 
+// Clean the house
+// Pay bills
+Задача 3
+Дан массив объектов products, где каждый объект содержит название товара и его цену. Выведите в консоль все товары, цена которых превышает 100.
+
+javascript
+Копировать код
+const products = [
+  { name: "Laptop", price: 1500 },
+  { name: "Book", price: 20 },
+  { name: "Phone", price: 800 }
+];
+
+// Пример консоль лога: 
+// Laptop: $1500
+// Phone: $800
+5. Задачи на метод reduce
+Задача 1
+Дан массив объектов items, где каждый объект содержит название товара и его количество. Посчитайте общее количество всех товаров.
+
+javascript
+Копировать код
+const items = [
+  { name: "Apples", quantity: 10 },
+  { name: "Bananas", quantity: 5 },
+  { name: "Oranges", quantity: 8 }
+];
+
+// Пример консоль лога: 23
+Задача 2
+У вас есть массив объектов transactions, где каждый объект содержит тип транзакции (приход или расход) и сумму. Подсчитайте общий баланс (сумма всех приходов минус сумма всех расходов).
+
+javascript
+Копировать код
+const transactions = [
+  { type: "income", amount: 1000 },
+  { type: "expense", amount: 200 },
+  { type: "income", amount: 500 },
+  { type: "expense", amount: 150 }
+];
+
+// Пример консоль лога: 1150
+Задача 3
+Дан массив объектов books, где каждый объект содержит название книги и её цену. Найдите общую стоимость всех книг.
+
+javascript
+Копировать код
+const books = [
+  { title: "1984", price: 15 },
+  { title: "The Great Gatsby", price: 10 },
+  { title: "War and Peace", price: 20 }
+];
+
+// Пример консоль лога: 45
