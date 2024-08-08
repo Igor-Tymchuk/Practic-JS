@@ -187,3 +187,23 @@
 // const logProductNames = arr => arr.map(item => `'${item.product}'`).join(', ')
 // // Перевірка
 // console.log(logProductNames(products));// 'Apple', 'Banana', 'Cherry'
+
+// Задача 1
+// У вас есть массив объектов students, где каждый объект содержит имя студента, его возраст и массив оценок. Получите массив имен студентов старше 18 лет, у которых средняя оценка выше 80.
+
+// javascript
+// Копировать код
+// const students = [
+//   { name: "Alice", age: 19, grades: [85, 90, 88] },
+//   { name: "Bob", age: 17, grades: [70, 75, 80] },
+//   { name: "Charlie", age: 20, grades: [95, 92, 93] }
+// ];
+
+// const studentsNames = (arr) => arr
+//   .filter((item) => item.age > 18 && item.grades
+//     .reduce((total, item) => total += item, 0) / item.grades.length > 80)
+//   .map((item) => item.name);
+
+//   console.log(studentsNames(students));
+
+// Пример консоль лога: ["Alice", "Charlie"]
