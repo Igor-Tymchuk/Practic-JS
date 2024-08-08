@@ -1,0 +1,128 @@
+Задача 1
+У вас есть массив объектов students, где каждый объект содержит имя студента, его возраст и массив оценок. Получите массив имен студентов старше 18 лет, у которых средняя оценка выше 80.
+
+javascript
+Копировать код
+const students = [
+  { name: "Alice", age: 19, grades: [85, 90, 88] },
+  { name: "Bob", age: 17, grades: [70, 75, 80] },
+  { name: "Charlie", age: 20, grades: [95, 92, 93] }
+];
+
+// Пример консоль лога: ["Alice", "Charlie"]
+Задача 2
+Дан массив объектов orders, где каждый объект содержит идентификатор заказа, массив товаров (название и количество) и статус заказа. Получите массив названий всех товаров из выполненных заказов, отсортированный по алфавиту.
+
+javascript
+Копировать код
+const orders = [
+  { id: 1, products: [{ name: "Laptop", quantity: 1 }, { name: "Mouse", quantity: 2 }], status: "completed" },
+  { id: 2, products: [{ name: "Phone", quantity: 1 }, { name: "Headphones", quantity: 1 }], status: "pending" },
+  { id: 3, products: [{ name: "Tablet", quantity: 2 }, { name: "Charger", quantity: 3 }], status: "completed" }
+];
+
+// Пример консоль лога: ["Charger", "Laptop", "Mouse", "Tablet"]
+Задача 3
+Есть массив объектов employees, каждый объект содержит имя сотрудника, его отдел и зарплату. Верните общую сумму зарплат всех сотрудников из отдела "Sales".
+
+javascript
+Копировать код
+const employees = [
+  { name: "John", department: "Sales", salary: 3000 },
+  { name: "Jane", department: "Marketing", salary: 4000 },
+  { name: "Jack", department: "Sales", salary: 3500 }
+];
+
+// Пример консоль лога: 6500
+Задача 4
+Дан массив объектов movies, где каждый объект содержит название фильма, год выпуска и массив жанров. Найдите массив уникальных жанров фильмов, выпущенных после 2000 года.
+
+javascript
+Копировать код
+const movies = [
+  { title: "Inception", year: 2010, genres: ["Sci-Fi", "Action"] },
+  { title: "Titanic", year: 1997, genres: ["Drama", "Romance"] },
+  { title: "The Dark Knight", year: 2008, genres: ["Action", "Crime"] }
+];
+
+// Пример консоль лога: ["Sci-Fi", "Action", "Crime"]
+Задача 5
+У вас есть массив объектов products, где каждый объект содержит название товара, его цену и категорию. Получите массив названий товаров из категории "Electronics", цена которых ниже 500.
+
+javascript
+Копировать код
+const products = [
+  { name: "Laptop", price: 1500, category: "Electronics" },
+  { name: "Mouse", price: 20, category: "Electronics" },
+  { name: "Phone", price: 800, category: "Electronics" },
+  { name: "Charger", price: 25, category: "Electronics" }
+];
+
+// Пример консоль лога: ["Mouse", "Charger"]
+Задача 6
+Дан массив объектов books, где каждый объект содержит название книги, автора и количество страниц. Найдите имя автора, чьи книги в сумме содержат более 1000 страниц.
+
+javascript
+Копировать код
+const books = [
+  { title: "1984", author: "George Orwell", pages: 328 },
+  { title: "War and Peace", author: "Leo Tolstoy", pages: 1225 },
+  { title: "The Great Gatsby", author: "F. Scott Fitzgerald", pages: 180 }
+];
+
+// Пример консоль лога: "Leo Tolstoy"
+Задача 7
+Есть массив объектов users, где каждый объект содержит имя пользователя, его возраст и массив ролей. Верните массив уникальных ролей пользователей старше 21 года.
+
+javascript
+Копировать код
+const users = [
+  { name: "Alice", age: 22, roles: ["Admin", "Editor"] },
+  { name: "Bob", age: 20, roles: ["Viewer"] },
+  { name: "Charlie", age: 25, roles: ["Admin", "Viewer"] }
+];
+
+// Пример консоль лога: ["Admin", "Editor", "Viewer"]
+Задача 8
+У вас есть массив объектов transactions, где каждый объект содержит тип транзакции (приход или расход) и сумму. Найдите общий баланс, при условии, что учитываются только транзакции, превышающие 100.
+
+javascript
+Копировать код
+const transactions = [
+  { type: "income", amount: 150 },
+  { type: "expense", amount: 50 },
+  { type: "income", amount: 200 },
+  { type: "expense", amount: 150 }
+];
+
+// Пример консоль лога: 200
+Задача 9
+Дан массив объектов products, где каждый объект содержит название товара, цену и количество на складе. Верните список товаров, которых на складе меньше 10 штук, отсортированный по убыванию цены.
+
+javascript
+Копировать код
+const products = [
+  { name: "Laptop", price: 1500, stock: 5 },
+  { name: "Mouse", price: 20, stock: 50 },
+  { name: "Phone", price: 800, stock: 3 },
+  { name: "Charger", price: 25, stock: 8 }
+];
+
+// Пример консоль лога: [{name: "Laptop", price: 1500}, {name: "Phone", price: 800}, {name: "Charger", price: 25}]
+Задача 10
+Дан массив объектов students, где каждый объект содержит имя студента, его возраст и массив оценок. Найдите среднюю оценку всех студентов, которым меньше 20 лет.
+
+javascript
+Копировать код
+const students = [
+  { name: "Alice", age: 19, grades: [85, 90, 88] },
+  { name: "Bob", age: 21, grades: [70, 75, 80] },
+  { name: "Charlie", age: 18, grades: [95, 92, 93] }
+];
+
+// Пример консоль лога: 90
+
+
+
+
+
