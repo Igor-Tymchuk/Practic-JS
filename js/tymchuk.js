@@ -184,18 +184,50 @@
 // Задача 2
 // Дан массив объектов orders, где каждый объект содержит идентификатор заказа, массив товаров (название и количество) и статус заказа. Получите массив названий всех товаров из выполненных заказов, отсортированный по алфавиту.
 
-const orders = [
-    { id: 1, products: [{ name: "Laptop", quantity: 1 }, { name: "Mouse", quantity: 2 }], status: "completed" },
-    { id: 2, products: [{ name: "Phone", quantity: 1 }, { name: "Headphones", quantity: 1 }], status: "pending" },
-    { id: 3, products: [{ name: "Tablet", quantity: 2 }, { name: "Charger", quantity: 3 }], status: "completed" }
-];
+// const orders = [
+//     { id: 1, products: [{ name: "Laptop", quantity: 1 }, { name: "Mouse", quantity: 2 }], status: "completed" },
+//     { id: 2, products: [{ name: "Phone", quantity: 1 }, { name: "Headphones", quantity: 1 }], status: "pending" },
+//     { id: 3, products: [{ name: "Tablet", quantity: 2 }, { name: "Charger", quantity: 3 }], status: "completed" }
+// ];
 
-const completedProducts = array => array.filter(item => item.status === "completed")
-.flatMap(item => item.products)
-.map(item => item.name)
-.toSorted((a, b) => a.localeCompare(b));
+// const completedProducts = array => array.filter(item => item.status === "completed")
+// .flatMap(item => item.products)
+// .map(item => item.name)
+// .toSorted((a, b) => a.localeCompare(b));
 
-console.log("completedProducts:", completedProducts(orders))
+// console.log("completedProducts:", completedProducts(orders))
 
 
 // Пример консоль лога: ["Charger", "Laptop", "Mouse", "Tablet"]
+
+// Задача 10
+// Дан массив объектов students, где каждый объект содержит имя студента, его возраст и массив оценок. Найдите среднюю оценку всех студентов, которым меньше 20 лет.
+
+// const students = [
+//     { name: "Alice", age: 19, grades: [85, 90, 88] },
+//     { name: "Bob", age: 21, grades: [70, 75, 80] },
+//     { name: "Charlie", age: 18, grades: [95, 92, 90] }
+// ];
+
+// const averageGrade = array => array.filter(student => student.age < 20)
+//     .flatMap(student => student.grades)
+//     .reduce((acc, grade, index, arr) => acc += grade / arr.length, 0)
+
+// console.log("averageGrade:", averageGrade(students))// Пример консоль лога: 90
+
+// // Задача 9
+// // Дан массив объектов products, где каждый объект содержит название товара, цену и количество на складе. Верните список товаров, которых на складе меньше 10 штук, отсортированный по убыванию цены.
+
+// const products = [
+//     { name: "Laptop", price: 1500, stock: 5 },
+//     { name: "Mouse", price: 20, stock: 50 },
+//     { name: "Phone", price: 800, stock: 3 },
+//     { name: "Charger", price: 25, stock: 8 }
+// ];
+
+// const less10 = array => array.filter(product => product.stock < 10)
+// .toSorted((a, b) => b.price - a.price)
+
+// console.log("less10:", less10(products))
+
+// Пример консоль лога: [{name: "Laptop", price: 1500}, {name: "Phone", price: 800}, {name: "Charger", price: 25}]
