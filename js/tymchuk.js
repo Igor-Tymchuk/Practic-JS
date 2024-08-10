@@ -235,21 +235,92 @@
 // Задача 7
 // Есть массив объектов users, где каждый объект содержит имя пользователя, его возраст и массив ролей. Верните массив уникальных ролей пользователей старше 21 года.
 
-const users = [
-    { name: "Alice", age: 22, roles: ["Admin", "Editor"] },
-    { name: "Bob", age: 20, roles: ["Viewer"] },
-    { name: "Charlie", age: 25, roles: ["Admin", "Viewer"] }
+// const users = [
+//     { name: "Alice", age: 22, roles: ["Admin", "Editor"] },
+//     { name: "Bob", age: 20, roles: ["Viewer"] },
+//     { name: "Charlie", age: 25, roles: ["Admin", "Viewer"] }
+// ];
+
+// const uniqueRole = array => array.filter(user => user.age > 21)
+//     .flatMap(user => user.roles)
+//     .reduce((acc, role,) => {
+//         if (!acc.includes(role)) {
+//             acc.push(role)
+//         }
+//         return acc;
+//     }, [])
+
+
+// console.log("uniqueRole:", uniqueRole(users))
+// Пример консоль лога: ["Admin", "Editor", "Viewer"]
+
+// 1.Знайти три найдорожчі товари у кожній категорії та відсортувати їх за зростанням ціни:
+
+// У вас є масив об'єктів products, кожен з яких має властивості name, category та price.
+// Знайдіть три найдорожчі товари у кожній категорії та відсортуйте їх за зростанням ціни.
+
+// const products = [
+//     { name: 'Laptop', category: 'Electronics', price: 1200 },
+//     { name: 'Phone', category: 'Electronics', price: 800 },
+//     { name: 'Tablet', category: 'Electronics', price: 600 },
+//     { name: 'Camera', category: 'Electronics', price: 700 },
+//     { name: 'Shirt', category: 'Clothing', price: 50 },
+//     { name: 'Shoes', category: 'Clothing', price: 100 },
+//     { name: 'Jeans', category: 'Clothing', price: 80 },
+//     { name: 'Jacket', category: 'Clothing', price: 150 },
+//     { name: 'Watch', category: 'Accessories', price: 200 },
+//     { name: 'Sunglasses', category: 'Accessories', price: 150 },
+//     { name: 'Hat', category: 'Accessories', price: 50 },
+//     { name: 'Belt', category: 'Accessories', price: 100 }
+// ];
+
+// const getTopThreeProducts = (products) => {
+//     // Групування продуктів за категоріями
+//     const grouped = products.reduce((acc, product) => {
+//         if (!acc[product.category]) {
+//             acc[product.category] = [];
+//         }
+//         acc[product.category].push({ name: product.name, price: product.price });
+//         return acc;
+//     }, {});
+
+//     // // Для кожної категорії знайти три найдорожчі продукти та відсортувати їх за зростанням ціни
+//     return Object.entries(grouped).map(([category, items]) => {
+//         const topThree = items
+//             .sort((a, b) => b.price - a.price) // Сортуємо за спаданням ціни
+//             .slice(0, 3) // Беремо три найдорожчі
+//             .sort((a, b) => a.price - b.price); // Сортуємо за зростанням ціни
+
+//         return {
+//             category,
+//             products: topThree
+//         };
+//     });
+// };
+
+// console.log(getTopThreeProducts(products));
+
+// Очікуваний результат:
+// [
+//   { category: 'Electronics', products: [{ name: 'Tablet', price: 600 }, { name: 'Camera', price: 700 }, { name: 'Phone', price: 800 }] },
+//   { category: 'Clothing', products: [{ name: 'Jeans', price: 80 }, { name: 'Shoes', price: 100 }, { name: 'Jacket', price: 150 }] },
+//   { category: 'Accessories', products: [{ name: 'Belt', price: 100 }, { name: 'Sunglasses', price: 150 }, { name: 'Watch', price: 200 }] }
+// ]
+
+const arr1 = [
+    {"id": 1, "x": 2, "y": 3},
+    {"id": 2, "x": 3, "y": 6}
 ];
 
-const uniqueRole = array => array.filter(user => user.age > 21)
-    .flatMap(user => user.roles)
-    .reduce((acc, role,) => {
-        if (!acc.includes(role)) {
-            acc.push(role)
-        }
-        return acc;
-    }, [])
+const arr2 = [
+    {"id": 2, "x": 10, "y": 20},
+    {"id": 3, "x": 0, "y": 0}
+];
 
+const combined = [...arr1, ...arr2];
+const uniqueById = combined.reduce((acc, obj) => {
+    acc[obj.id] = obj;
+    return acc;
+}, {});
+const result = Object.values(uniqueById);
 
-console.log("uniqueRole:", uniqueRole(users))
-// Пример консоль лога: ["Admin", "Editor", "Viewer"]
