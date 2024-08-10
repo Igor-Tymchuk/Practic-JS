@@ -1,0 +1,243 @@
+Ось ще складніші задачі на методи масивів з об'єктами, що включають чейнінг методів:
+
+1.Знайти три найдорожчі товари у кожній категорії та відсортувати їх за зростанням ціни:
+
+У вас є масив об'єктів products, кожен з яких має властивості name, category та price.
+Знайдіть три найдорожчі товари у кожній категорії та відсортуйте їх за зростанням ціни.
+
+const products = [
+  { name: 'Laptop', category: 'Electronics', price: 1200 },
+  { name: 'Phone', category: 'Electronics', price: 800 },
+  { name: 'Tablet', category: 'Electronics', price: 600 },
+  { name: 'Camera', category: 'Electronics', price: 700 },
+  { name: 'Shirt', category: 'Clothing', price: 50 },
+  { name: 'Shoes', category: 'Clothing', price: 100 },
+  { name: 'Jeans', category: 'Clothing', price: 80 },
+  { name: 'Jacket', category: 'Clothing', price: 150 },
+  { name: 'Watch', category: 'Accessories', price: 200 },
+  { name: 'Sunglasses', category: 'Accessories', price: 150 },
+  { name: 'Hat', category: 'Accessories', price: 50 },
+  { name: 'Belt', category: 'Accessories', price: 100 }
+];
+// Очікуваний результат: 
+// [
+//   { category: 'Electronics', products: [{ name: 'Tablet', price: 600 }, { name: 'Camera', price: 700 }, { name: 'Phone', price: 800 }] },
+//   { category: 'Clothing', products: [{ name: 'Jeans', price: 80 }, { name: 'Shoes', price: 100 }, { name: 'Jacket', price: 150 }] },
+//   { category: 'Accessories', products: [{ name: 'Belt', price: 100 }, { name: 'Sunglasses', price: 150 }, { name: 'Watch', price: 200 }] }
+// ]
+
+2.Знайти співробітників, які працювали більше ніж 50 годин на тиждень протягом місяця, 
+та підрахувати їх загальний овертайм за цей місяць:
+
+У вас є масив об'єктів workHours, кожен з яких має властивості employeeId, week, hoursWorked. 
+Знайдіть співробітників, які працювали більше ніж 50 годин на тиждень протягом хоча б одного 
+тижня в місяці, та підрахуйте їх загальний овертайм (години понад 40) за всі такі тижні.
+
+const workHours = [
+  { employeeId: 1, week: 1, hoursWorked: 45 },
+  { employeeId: 1, week: 2, hoursWorked: 55 },
+  { employeeId: 1, week: 3, hoursWorked: 60 },
+  { employeeId: 2, week: 1, hoursWorked: 50 },
+  { employeeId: 2, week: 2, hoursWorked: 52 },
+  { employeeId: 2, week: 3, hoursWorked: 48 },
+  { employeeId: 3, week: 1, hoursWorked: 40 },
+  { employeeId: 3, week: 2, hoursWorked: 38 },
+  { employeeId: 3, week: 3, hoursWorked: 45 }
+];
+// Очікуваний результат: 
+// [
+//   { employeeId: 1, totalOvertime: 45 },
+//   { employeeId: 2, totalOvertime: 22 }
+// ]
+
+3.Знайти середній бал студентів у кожному предметі та відсортувати предмети за середнім балом, 
+вибравши тільки ті предмети, середній бал яких більше 80:
+
+У вас є масив об'єктів studentGrades, кожен з яких має властивості name, subject, grade. 
+Знайдіть середній бал для кожного предмету, відсортуйте предмети за середнім балом у 
+спадному порядку та виберіть тільки ті предмети, середній бал яких більше 80.
+
+const studentGrades = [
+  { name: 'Alice', subject: 'Math', grade: 90 },
+  { name: 'Bob', subject: 'Math', grade: 80 },
+  { name: 'Alice', subject: 'Science', grade: 85 },
+  { name: 'Bob', subject: 'Science', grade: 70 },
+  { name: 'Charlie', subject: 'Math', grade: 95 },
+  { name: 'Charlie', subject: 'Science', grade: 100 },
+  { name: 'Alice', subject: 'History', grade: 70 },
+  { name: 'Bob', subject: 'History', grade: 65 },
+  { name: 'Charlie', subject: 'History', grade: 60 }
+];
+// Очікуваний результат: 
+// [
+//   { subject: 'Science', average: 85 },
+//   { subject: 'Math', average: 88.33 }
+// ]
+
+4.Знайти найпопулярніший продукт у кожній категорії та створити новий масив об'єктів з продуктами, 
+в яких кількість продажів більше середньої кількості продажів по всій категорії:
+
+У вас є масив об'єктів sales, кожен з яких має властивості productId, category, quantitySold. 
+Знайдіть найпопулярніший продукт у кожній категорії та створіть новий масив об'єктів з продуктами, 
+в яких кількість продажів більше середньої кількості продажів по всій категорії.
+
+const sales = [
+  { productId: 'p1', category: 'Electronics', quantitySold: 50 },
+  { productId: 'p2', category: 'Electronics', quantitySold: 70 },
+  { productId: 'p3', category: 'Clothing', quantitySold: 20 },
+  { productId: 'p4', category: 'Clothing', quantitySold: 30 },
+  { productId: 'p5', category: 'Accessories', quantitySold: 15 },
+  { productId: 'p6', category: 'Accessories', quantitySold: 25 }
+];
+// Очікуваний результат: 
+// [
+//   { productId: 'p2', category: 'Electronics', quantitySold: 70 },
+//   { productId: 'p4', category: 'Clothing', quantitySold: 30 },
+//   { productId: 'p6', category: 'Accessories', quantitySold: 25 }
+// ]
+
+5.Створити звіт про витрати кожного клієнта на різні категорії продуктів, з обчисленням 
+відсотка витрат на кожну категорію від загальної суми витрат клієнта:
+
+У вас є масив об'єктів purchases, кожен з яких має властивості clientId, category, amountSpent.
+Сформуйте звіт, який показує витрати кожного клієнта на різні категорії продуктів та відсоток 
+витрат на кожну категорію від загальної суми витрат клієнта.
+
+const purchases = [
+  { clientId: 1, category: 'Electronics', amountSpent: 300 },
+  { clientId: 2, category: 'Clothing', amountSpent: 200 },
+  { clientId: 1, category: 'Clothing', amountSpent: 150 },
+  { clientId: 3, category: 'Electronics', amountSpent: 400 },
+  { clientId: 2, category: 'Electronics', amountSpent: 100 },
+  { clientId: 3, category: 'Clothing', amountSpent: 50 }
+];
+// Очікуваний результат: 
+// {
+//   1: { total: 450, categories: { Electronics: { amount: 300, percentage: 66.67 }, Clothing: { amount: 150, percentage: 33.33 } } },
+//   2: { total: 300, categories: { Clothing: { amount: 200, percentage: 66.67 }, Electronics: { amount: 100, percentage: 33.33 } } },
+//   3: { total: 450, categories: { Electronics: { amount: 400, percentage: 88.89 }, Clothing: { amount: 50, percentage: 11.11 } } }
+// }
+Знайти три найкращі оцінки у кожному предметі та створити новий масив об'єктів з студентами, 
+які отримали ці оцінки, включаючи середній бал кожного студента у всіх предметах:
+
+6.У вас є масив об'єктів studentGrades, кожен з яких має властивості name, subject, grade. 
+Знайдіть три найкращі оцінки у кожному предметі та створіть новий масив об'єктів з студентами, 
+які отримали ці оцінки, включаючи середній бал кожного студента у всіх предметах.
+
+const studentGrades = [
+  { name: 'Alice', subject: 'Math', grade: 90 },
+  { name: 'Bob', subject: 'Math', grade: 80 },
+  { name: 'Alice', subject: 'Science', grade: 85 },
+  { name: 'Bob', subject: 'Science', grade: 70 },
+  { name: 'Charlie', subject: 'Math', grade: 95 },
+  { name: 'Charlie', subject: 'Science', grade: 100 },
+  { name: 'Alice', subject: 'History', grade: 70 },
+  { name: 'Bob', subject: 'History', grade: 65 },
+  { name: 'Charlie', subject: 'History', grade: 60 }
+];
+// Очікуваний результат: 
+// [
+//   { name: 'Alice', subjects: [{ subject: 'Math', grade: 90 }, { subject: 'Science', grade: 85 }], average: 81.67 },
+//   { name: 'Charlie', subjects: [{ subject: 'Math', grade: 95 }, { subject: 'Science', grade: 100 }], average: 85 },
+//   { name: 'Bob', subjects: [{ subject: 'Math', grade: 80 }], average: 71.67 }
+// ]
+
+7.Знайти клієнтів, які зробили більше ніж одну покупку, та обчислити їх загальну кількість 
+покупок та загальну суму витрат, відсортувавши клієнтів за кількістю покупок у спадному порядку:
+
+У вас є масив об'єктів purchases, кожен з яких має властивості clientId, category, amountSpent. 
+Знайдіть клієнтів, які зробили більше ніж одну покупку, та обчисліть їх загальну кількість покупок 
+та загальну суму витрат, відсортувавши клієнтів за кількістю покупок у спадному порядку.
+
+const purchases = [
+  { clientId: 1, category: 'Electronics', amountSpent: 300 },
+  { clientId: 2, category: 'Clothing', amountSpent: 200 },
+  { clientId: 1, category: 'Clothing', amountSpent: 150 },
+  { clientId: 3, category: 'Electronics', amountSpent: 400 },
+  { clientId: 2, category: 'Electronics', amountSpent: 100 },
+  { clientId: 3, category: 'Clothing', amountSpent: 50 },
+  { clientId: 1, category: 'Accessories', amountSpent: 100 }
+];
+// Очікуваний результат: 
+// [
+//   { clientId: 1, purchaseCount: 3, totalSpent: 550 },
+//   { clientId: 2, purchaseCount: 2, totalSpent: 300 },
+//   { clientId: 3, purchaseCount: 2, totalSpent: 450 }
+// ]
+
+8.Знайти три найчастіше купувані товари у кожній категорії та створити новий масив об'єктів з 
+цими товарами, включаючи кількість їх продажів та відсоток продажів від загальної кількості продажів у категорії:
+
+У вас є масив об'єктів sales, кожен з яких має властивості productId, category, quantitySold. 
+Знайдіть три найчастіше купувані товари у кожній категорії та створіть новий масив об'єктів з 
+цими товарами, включаючи кількість їх продажів та відсоток продажів від загальної кількості продажів у категорії.
+
+const sales = [
+  { productId: 'p1', category: 'Electronics', quantitySold: 50 },
+  { productId: 'p2', category: 'Electronics', quantitySold: 70 },
+  { productId: 'p3', category: 'Electronics', quantitySold: 30 },
+  { productId: 'p4', category: 'Clothing', quantitySold: 20 },
+  { productId: 'p5', category: 'Clothing', quantitySold: 30 },
+  { productId: 'p6', category: 'Clothing', quantitySold: 40 },
+  { productId: 'p7', category: 'Accessories', quantitySold: 15 },
+  { productId: 'p8', category: 'Accessories', quantitySold: 25 },
+  { productId: 'p9', category: 'Accessories', quantitySold: 10 }
+];
+// Очікуваний результат: 
+// [
+//   { productId: 'p2', category: 'Electronics', quantitySold: 70, percentage: 46.67 },
+//   { productId: 'p1', category: 'Electronics', quantitySold: 50, percentage: 33.33 },
+//   { productId: 'p3', category: 'Electronics', quantitySold: 30, percentage: 20 },
+//   { productId: 'p6', category: 'Clothing', quantitySold: 40, percentage: 44.44 },
+//   { productId: 'p5', category: 'Clothing', quantitySold: 30, percentage: 33.33 },
+//   { productId: 'p4', category: 'Clothing', quantitySold: 20, percentage: 22.22 },
+//   { productId: 'p8', category: 'Accessories', quantitySold: 25, percentage: 41.67 },
+//   { productId: 'p7', category: 'Accessories', quantitySold: 15, percentage: 25 },
+//   { productId: 'p9', category: 'Accessories', quantitySold: 10, percentage: 16.67 }
+// ]
+
+9.Знайти клієнтів, які витратили більше 300 на покупки, та створити звіт, який показує 
+кількість покупок, загальну суму витрат та середню суму витрат на одну покупку для кожного з цих клієнтів:
+
+У вас є масив об'єктів purchases, кожен з яких має властивості clientId, category, amountSpent. 
+Знайдіть клієнтів, які витратили більше 300 на покупки, та створіть звіт, який показує кількість 
+покупок, загальну суму витрат та середню суму витрат на одну покупку для кожного з цих клієнтів.
+
+const purchases = [
+  { clientId: 1, category: 'Electronics', amountSpent: 300 },
+  { clientId: 2, category: 'Clothing', amountSpent: 200 },
+  { clientId: 1, category: 'Clothing', amountSpent: 150 },
+  { clientId: 3, category: 'Electronics', amountSpent: 400 },
+  { clientId: 2, category: 'Electronics', amountSpent: 100 },
+  { clientId: 3, category: 'Clothing', amountSpent: 50 },
+  { clientId: 1, category: 'Accessories', amountSpent: 100 }
+];
+// Очікуваний результат: 
+// [
+//   { clientId: 1, purchaseCount: 3, totalSpent: 550, averageSpent: 183.33 },
+//   { clientId: 3, purchaseCount: 2, totalSpent: 450, averageSpent: 225 }
+// ]
+
+10.Знайти предмети, в яких середній бал студентів більше 80, та створити звіт, який показує 
+найвищий, найнижчий та середній бал для кожного з цих предметів:
+
+У вас є масив об'єктів studentGrades, кожен з яких має властивості name, subject, grade. 
+Знайдіть предмети, в яких середній бал студентів більше 80, та створіть звіт, який показує 
+найвищий, найнижчий та середній бал для кожного з цих предметів.
+
+const studentGrades = [
+  { name: 'Alice', subject: 'Math', grade: 90 },
+  { name: 'Bob', subject: 'Math', grade: 80 },
+  { name: 'Alice', subject: 'Science', grade: 85 },
+  { name: 'Bob', subject: 'Science', grade: 70 },
+  { name: 'Charlie', subject: 'Math', grade: 95 },
+  { name: 'Charlie', subject: 'Science', grade: 100 },
+  { name: 'Alice', subject: 'History', grade: 70 },
+  { name: 'Bob', subject: 'History', grade: 65 },
+  { name: 'Charlie', subject: 'History', grade: 60 }
+];
+// Очікуваний результат: 
+// [
+//   { subject: 'Math', highest: 95, lowest: 80, average: 88.33 },
+//   { subject: 'Science', highest: 100, lowest: 70, average: 85 }
+// ]

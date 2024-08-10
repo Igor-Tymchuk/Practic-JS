@@ -231,3 +231,25 @@
 // console.log("less10:", less10(products))
 
 // Пример консоль лога: [{name: "Laptop", price: 1500}, {name: "Phone", price: 800}, {name: "Charger", price: 25}]
+
+// Задача 7
+// Есть массив объектов users, где каждый объект содержит имя пользователя, его возраст и массив ролей. Верните массив уникальных ролей пользователей старше 21 года.
+
+const users = [
+    { name: "Alice", age: 22, roles: ["Admin", "Editor"] },
+    { name: "Bob", age: 20, roles: ["Viewer"] },
+    { name: "Charlie", age: 25, roles: ["Admin", "Viewer"] }
+];
+
+const uniqueRole = array => array.filter(user => user.age > 21)
+    .flatMap(user => user.roles)
+    .reduce((acc, role,) => {
+        if (!acc.includes(role)) {
+            acc.push(role)
+        }
+        return acc;
+    }, [])
+
+
+console.log("uniqueRole:", uniqueRole(users))
+// Пример консоль лога: ["Admin", "Editor", "Viewer"]
