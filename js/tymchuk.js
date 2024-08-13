@@ -357,3 +357,52 @@
 // console.log("fibonacci:", fibonacci(4_000_000))
 // Сума всіх парних елементів ряду Фібоначчі, які не перевищують чотири мільйони, дорівнює 4,613,732.
 
+// 1. Створення класу та використання this
+// Умова: Створіть клас Person, який приймає name та age як аргументи конструктора. 
+// Додайте метод introduce, який повертатиме рядок з представленням особи у форматі: 
+// "Hi, my name is [name] and I am [age] years old." 
+// Створіть об'єкт цього класу та викличте метод introduce.
+
+// class Person {
+//     constructor(name, age) {
+//         this.name = name;
+//         this.age = age;
+//     }
+
+//     introduce() {
+//         return `Hi, my name is ${this.name} and I am ${this.age} years old.`
+//     }
+// }
+
+// const john = new Person("John", 30);
+// // console.log("john:", john)
+// // console.log(john.introduce());
+// const igor = new Person("Igor", 31);
+// console.log(igor.introduce());
+// igor.lastName = "Tymchuk";
+// console.log("igor:", igor)
+// const artur = Object.create(igor);
+// console.log("artur:", artur)
+// console.log(artur.age);
+// Очікуваний результат: Hi, my name is John and I am 30 years old.
+
+// 2. Клас з методом, який змінює властивості об'єкта
+// Умова: Створіть клас Car, який має властивості model та year. Додайте метод updateModel, 
+// який приймає нову модель як аргумент і змінює відповідну властивість об'єкта. 
+// Створіть об'єкт цього класу, викличте метод updateModel і перевірте, 
+// що властивість model змінилася.
+
+// class Car {
+//     constructor(model, year) {
+//         this.model = model;
+//         this.year = year;
+//     }
+//     updateModel(newModel) {
+//         this.model = newModel;
+//     }
+// }
+
+// const myCar = new Car("Toyota", 2020);
+// myCar.updateModel("Honda");
+// console.log(myCar);
+// Очікуваний результат: Honda
