@@ -307,20 +307,53 @@
 //   { category: 'Accessories', products: [{ name: 'Belt', price: 100 }, { name: 'Sunglasses', price: 150 }, { name: 'Watch', price: 200 }] }
 // ]
 
-const arr1 = [
-    {"id": 1, "x": 2, "y": 3},
-    {"id": 2, "x": 3, "y": 6}
-];
+// const arr1 = [
+//     {"id": 1, "x": 2, "y": 3},
+//     {"id": 2, "x": 3, "y": 6}
+// ];
 
-const arr2 = [
-    {"id": 2, "x": 10, "y": 20},
-    {"id": 3, "x": 0, "y": 0}
-];
+// const arr2 = [
+//     {"id": 2, "x": 10, "y": 20},
+//     {"id": 3, "x": 0, "y": 0}
+// ];
 
-const combined = [...arr1, ...arr2];
-const uniqueById = combined.reduce((acc, obj) => {
-    acc[obj.id] = obj;
-    return acc;
-}, {});
-const result = Object.values(uniqueById);
+// const combined = [...arr1, ...arr2];
+// const uniqueById = combined.reduce((acc, obj) => {
+//     acc[obj.id] = obj;
+//     return acc;
+// }, {});
+// const result = Object.values(uniqueById);
+
+// Если выписать все натуральные числа меньше 10, кратные 3 или 5, то получим 3, 5, 6 и 9. Сумма этих чисел равна 23.
+// Найдите сумму всех чисел меньше 1000, кратных 3 или 5.
+
+// const sumAll3_5Numbers = number => {
+//     let sum = 0;
+//     for (let i = 0; i < number; i++) {
+//         if (i % 3 === 0 || i % 5 === 0) sum += i;
+//     }
+//     return sum;
+// }
+// console.log("sumAll3_5Numbers:", sumAll3_5Numbers(1000)) //Сума всіх чисел, менших за 1000 і кратних 3 або 5, дорівнює 233168.
+
+// // Каждый следующий элемент ряда Фибоначчи получается при сложении двух предыдущих. Начиная с 1 и 2, первые 10 элементов будут:
+// // 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, ...
+// // Найдите сумму всех четных элементов ряда Фибоначчи, которые не превышают четыре миллиона.
+
+// const fibonacci = number => {
+//     let oddSum = 0;
+//     let prevNumber = 1;
+//     let nextNumber = 2;
+
+//     for (; prevNumber < number;) {
+//         if (prevNumber % 2 === 0) oddSum += prevNumber;
+//         let temp = prevNumber + nextNumber;
+//         prevNumber = nextNumber;
+//         nextNumber = temp;
+//     }
+//     return oddSum;
+// }
+
+// console.log("fibonacci:", fibonacci(4_000_000))
+// Сума всіх парних елементів ряду Фібоначчі, які не перевищують чотири мільйони, дорівнює 4,613,732.
 

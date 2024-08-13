@@ -1,0 +1,198 @@
+1. Створення класу та використання this
+Умова: Створіть клас Person, який приймає name та age як аргументи конструктора. 
+Додайте метод introduce, який повертатиме рядок з представленням особи у форматі: 
+"Hi, my name is [name] and I am [age] years old." 
+Створіть об'єкт цього класу та викличте метод introduce.
+
+class Person {
+    constructor(name, age) {
+        // Ваш код тут
+    }
+
+    introduce() {
+        // Ваш код тут
+    }
+}
+
+const john = new Person("John", 30);
+console.log(john.introduce());
+Очікуваний результат: Hi, my name is John and I am 30 years old.
+
+2. Клас з методом, який змінює властивості об'єкта
+Умова: Створіть клас Car, який має властивості model та year. Додайте метод updateModel, 
+який приймає нову модель як аргумент і змінює відповідну властивість об'єкта. 
+Створіть об'єкт цього класу, викличте метод updateModel і перевірте, 
+що властивість model змінилася.
+
+class Car {
+    constructor(model, year) {
+        // Ваш код тут
+    }
+
+    updateModel(newModel) {
+        // Ваш код тут
+    }
+}
+
+const myCar = new Car("Toyota", 2020);
+myCar.updateModel("Honda");
+console.log(myCar.model);
+Очікуваний результат: Honda
+
+3. Використання this в об'єкті з методом
+Умова: Створіть об'єкт user з властивостями name та age, а також методом greet, який 
+повертатиме рядок: "Hello, my name is [name]." Викличте метод greet і перевірте, 
+що він повертає правильний рядок.
+
+const user = {
+    name: "Alice",
+    age: 25,
+    greet() {
+        // Ваш код тут
+    }
+};
+
+console.log(user.greet());
+Очікуваний результат: Hello, my name is Alice.
+
+4. Створення класу з приватними властивостями (через #)
+Умова: Створіть клас BankAccount з приватною властивістю #balance та методами getBalance 
+і deposit. Метод getBalance повинен повертати поточний баланс, а метод deposit приймати 
+суму як аргумент і додавати її до балансу. Створіть об'єкт цього класу, додайте до балансу 
+деяку суму і перевірте, що баланс оновився правильно.
+
+class BankAccount {
+    // Ваш код тут
+    
+    constructor(initialBalance) {
+        // Ваш код тут
+    }
+
+    getBalance() {
+        // Ваш код тут
+    }
+
+    deposit(amount) {
+        // Ваш код тут
+    }
+}
+
+const account = new BankAccount(1000);
+account.deposit(500);
+console.log(account.getBalance());
+Очікуваний результат: 1500
+
+5. Створення класу зі статичним методом
+Умова: Створіть клас MathOperations зі статичним методом add, який приймає два аргументи 
+і повертає їх суму. Викличте цей метод без створення об'єкта класу і перевірте результат.
+
+class MathOperations {
+    // Ваш код тут
+}
+
+console.log(MathOperations.add(5, 10));
+Очікуваний результат: 15
+
+6. Наслідування класів
+Умова: Створіть клас Animal з властивістю name та методом speak, який повертатиме рядок: 
+"[name] makes a noise." Створіть клас Dog, який наслідує Animal та перевизначає метод speak, 
+щоб він повертав рядок: "[name] barks." Створіть об'єкт класу Dog та викличте метод speak.
+
+class Animal {
+    constructor(name) {
+        // Ваш код тут
+    }
+
+    speak() {
+        // Ваш код тут
+    }
+}
+
+class Dog extends Animal {
+    speak() {
+        // Ваш код тут
+    }
+}
+
+const dog = new Dog("Rex");
+console.log(dog.speak());
+Очікуваний результат: Rex barks.
+
+7. Використання super для доступу до методів батьківського класу
+Умова: Створіть клас Parent з властивістю name та методом greet, який повертатиме рядок: 
+"Hello from [name]." Створіть клас Child, який наслідує Parent та перевизначає метод greet, 
+щоб він повертав рядок: "[результат greet з Parent], and hello from child." 
+Створіть об'єкт класу Child та викличте метод greet.
+
+class Parent {
+    constructor(name) {
+        // Ваш код тут
+    }
+
+    greet() {
+        // Ваш код тут
+    }
+}
+
+class Child extends Parent {
+    greet() {
+        // Ваш код тут
+    }
+}
+
+const child = new Child("ParentName");
+console.log(child.greet());
+Очікуваний результат: Hello from ParentName, and hello from child.
+
+8. Зміна контексту this з call, apply, bind
+Умова: Створіть функцію greet, яка повертає рядок: "Hello, [name]." Створіть об'єкт person з 
+властивістю name. Використайте методи call, apply або bind для виклику функції greet з 
+контекстом об'єкта person.
+
+function greet() {
+    // Ваш код тут
+}
+
+const person = { name: "Bob" };
+console.log(greet.call(person));
+Очікуваний результат: Hello, Bob.
+
+9. Методи з функціями-стрілками та this
+Умова: Створіть клас Counter з властивістю count, яка ініціалізується значенням 0, та методом 
+increment, який збільшує count на 1. Використайте функцію-стрілку для методу increment, 
+щоб зберегти контекст this. Створіть об'єкт класу та викличте метод increment, перевіривши 
+значення властивості count.
+
+class Counter {
+    constructor() {
+        // Ваш код тут
+    }
+
+    increment = () => {
+        // Ваш код тут
+    }
+}
+
+const counter = new Counter();
+counter.increment();
+console.log(counter.count);
+Очікуваний результат: 1
+
+10. Метод, який використовує this в об'єкті
+Умова: Створіть об'єкт calculator з властивістю result, яка ініціалізується значенням 0, та методом 
+add, який приймає число як аргумент і додає його до result. Створіть метод getResult, який повертатиме 
+поточне значення result. Викличте метод add та getResult, щоб перевірити результат.
+
+const calculator = {
+    result: 0,
+    add(num) {
+        // Ваш код тут
+    },
+    getResult() {
+        // Ваш код тут
+    }
+};
+
+calculator.add(10);
+console.log(calculator.getResult());
+Очікуваний результат: 10
