@@ -64,3 +64,53 @@ const fulSum = (transactions) =>
     return acc;
   }, 0);
 // console.log(fulSum(transactions));
+
+// Задача 3:
+// Умова: Створіть конструктор функцію Car, яка приймає модель та рік
+// випуску. Додайте метод getInfo до прототипу, який повертає рядок у
+// форматі "Модель: [модель], Рік випуску: [рік]".
+
+function Car(model, age) {
+  this.model = model;
+  this.age = age;
+}
+
+Car.prototype.getInfo = function () {
+  return `Модель: ${this.model}, Рік випуску: ${this.age}`;
+};
+
+// Приклад використання:
+const car = new Car("Toyota", 2022);
+// console.log(car.getInfo()); // "Модель: Toyota, Рік випуску: 2022"
+// console.log(Car);
+// console.log(car);
+
+// Задача 4:
+// Умова: Створіть конструктор функцію Animal, що приймає ім'я тварини. Додайте
+// метод makeSound до прототипу, який виводить звук, що видає тварина,
+// наприклад, "Meow" або "Woof".
+
+function Animal(nameAnimal) {
+  this.nameAnimal = nameAnimal;
+}
+
+Animal.prototype.makeSound = function () {
+  switch (this.nameAnimal) {
+    case "Cat":
+      console.log("Meow");
+      break;
+    case "Dog":
+      console.log("Woof");
+      break;
+    default:
+      console.log("Not an animals");
+  }
+};
+
+// Приклад використання:
+// const animal = new Animal("Cat");
+// animal.makeSound(); // "Meow" (для кота)
+// const animal2 = new Animal("Dog");
+// animal2.makeSound();
+// const animal3 = new Animal("Frog");
+// animal3.makeSound();
