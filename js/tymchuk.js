@@ -406,3 +406,51 @@
 // myCar.updateModel("Honda");
 // console.log(myCar);
 // Очікуваний результат: Honda
+
+// Конструктор класу
+// Задача 1:
+// Умова: Створіть клас Person, який має конструктор для ініціалізації 
+// імені та віку особи. Додайте метод greet, який виводить привітання 
+// у форматі "Привіт, я [ім'я] і мені [вік] років."
+
+// class Person {
+//     constructor(params) {
+//         this.name = params.name;
+//         this.age = params.age;
+//     }
+
+//     greet() {
+//         console.log(`Привіт, я ${this.name} і мені ${this.age} років.`)
+//     }
+// }
+// // Приклад використання:
+// const person = new Person({name:'Оля', age: 30});
+// person.greet(); // "Привіт, я Оля і мені 30 років."
+
+// Задача 2:
+// Умова: Реалізуйте клас Rectangle, який має конструктор для ініціалізації 
+// ширини та висоти. Клас повинен мати методи getArea, що повертає площу 
+// прямокутника (ширина × висота), і getPerimeter, що повертає периметр 
+// прямокутника (2 × (ширина + висота)).
+
+// class Rectangle {
+//     constructor(width, height) {
+//         this.width = width;
+//         this.height = height;
+//     }
+
+//     getArea() {
+//         return this.height * this.width;
+//     }
+
+//     getPerimeter() {
+//         return (this.height + this.width) * 2;
+//     }
+// }
+
+// // Приклад використання:
+// const rect = new Rectangle();
+// rect.width = 10;
+// rect.height = 5;
+// console.log(rect.getArea()); // 50
+// console.log(rect.getPerimeter()); // 30
