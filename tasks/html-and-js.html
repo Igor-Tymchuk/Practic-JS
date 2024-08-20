@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css/html-and-js.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Секция 1: Изменение текста -->
+      <section id="text-section" class="section">
+        <h2>Секция 1: Изменение текста</h2>
+        <p id="text-paragraph">Этот текст можно изменить с помощью кнопки.</p>
+        <button id="text-button">Изменить текст</button>
+      </section>
+
+      <!-- Секция 2: Работа с изображениями -->
+      <section id="image-section" class="section">
+        <h2>Секция 2: Работа с изображениями</h2>
+        <img
+          id="image"
+          src="https://via.placeholder.com/150"
+          alt="Placeholder Image"
+        />
+        <button id="image-button">Изменить изображение</button>
+      </section>
+
+      <!-- Секция 3: Показ и скрытие контента -->
+      <section id="toggle-section" class="section">
+        <h2>Секция 3: Показ и скрытие контента</h2>
+        <button id="toggle-button">Показать/Скрыть текст</button>
+        <p id="toggle-paragraph" style="display: none">
+          Этот текст можно показывать и скрывать.
+        </p>
+      </section>
+
+      <!-- Секция 4: Изменение стилей -->
+      <section id="style-section" class="section">
+        <h2>Секция 4: Изменение стилей</h2>
+        <div id="style-box" class="box">Этот блок изменит свой стиль</div>
+        <button id="style-button">Изменить стиль</button>
+      </section>
+
+      <!-- Секция 5: Ввод и отображение данных -->
+      <section id="input-section" class="section">
+        <h2>Секция 5: Ввод и отображение данных</h2>
+        <input type="text" id="input-field" placeholder="Введите текст" />
+        <button id="input-button">Отобразить текст</button>
+        <p id="input-display"></p>
+      </section>
+      <section id="login-section" class="section">
+        <h2>Секция 6: Вход с логином и паролем</h2>
+        <input type="text" id="login-field" placeholder="Логин" />
+        <input type="password" id="password-field" placeholder="Пароль" />
+        <button id="login-button">Войти</button>
+        <p id="login-message"></p>
+      </section>
+    </div>
+
+    <script src="../js/html-and-js.js" type="module"></script>
+  </body>
+</html>
