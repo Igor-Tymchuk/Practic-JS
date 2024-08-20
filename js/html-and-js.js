@@ -1,4 +1,4 @@
-// задача 1.1
+// Секция 1
 
 const buttonEl = document.querySelector("#text-button");
 const textEl = document.querySelector("#text-paragraph");
@@ -13,3 +13,18 @@ function editText() {
   }
   textCheck = !textCheck;
 }
+
+// Секция 3
+
+const btnEl = document.querySelector('#toggle-button');
+const hideTextEl = document.querySelector('#toggle-paragraph');
+btnEl.addEventListener('click', () => {
+  if (hideTextEl.style.display === 'none') {
+    hideTextEl.style.display = 'block'
+  } else {
+    hideTextEl.style.display = 'none'
+  }
+});
+
+
+
