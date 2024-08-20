@@ -25,6 +25,29 @@ btnEl.addEventListener('click', () => {
     hideTextEl.style.display = 'none'
   }
 });
+/*
 
+Секция 4: Изменение стилей
+Задача 1: Изменить цвет блока при нажатии на кнопку.
+Описание: Когда пользователь нажимает на кнопку, цвет фона блока должен измениться, например, на зеленый.
+Подсказка: Используйте style.backgroundColor для изменения цвета фона.
 
+Задача 2: Изменить цвет текста в блоке при двойном клике на нем.
+Описание: Когда пользователь дважды щелкает на блок, цвет текста внутри блока должен измениться.
+Подсказка: Используйте событие dblclick для отслеживания двойного щелчка.
+
+*/
+
+const boxEl = document.querySelector("#style-box");
+const buttonElement = document.querySelector("#style-button");
+
+buttonElement.addEventListener("click", changeColor);
+function changeColor() {
+  boxEl.style.backgroundColor = "red";
+}
+
+boxEl.addEventListener("dblclick", changeText);
+function changeText() {
+  boxEl.style.color = "violet";
+}
 
