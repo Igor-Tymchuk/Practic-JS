@@ -1,71 +1,70 @@
 <!DOCTYPE html>
 <html lang="uk">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JS DOM і Події</title>
     <style>
-        #colorBox {
-            width: 100px;
-            height: 100px;
-            background-color: lightblue;
-        }
-        #movingBox {
-            width: 100px;
-            height: 100px;
-            background-color: lightgreen;
-            position: relative;
-        }
-        #time {
-            font-size: 24px;
-        }
+      #colorBox {
+        width: 100px;
+        height: 100px;
+        background-color: lightblue;
+      }
+      #movingBox {
+        width: 100px;
+        height: 100px;
+        background-color: lightgreen;
+        position: relative;
+      }
+      #time {
+        font-size: 24px;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <!-- Задача 1: Зміна тексту при натисканні -->
     <button id="changeTextBtn">Натисни мене</button>
-    
+
     <!-- Задача 2: Рахунок кліків -->
     <button id="clickCounterBtn">Натисни мене</button>
     <span id="clickCount">0</span>
-    
+
     <!-- Задача 3: Зміна кольору фону при наведенні -->
     <div id="colorBox"></div>
-    
+
     <!-- Задача 4: Валідація форми -->
     <form id="myForm">
-        <input type="text" id="nameInput" placeholder="Ім'я" >
-        <input type="email" id="emailInput" placeholder="Email">
-        <button type="submit">Відправити</button>
+      <input type="text" id="nameInput" placeholder="Ім'я" />
+      <input type="email" id="emailInput" placeholder="Email" />
+      <button type="submit">Відправити</button>
     </form>
-    <div id="formError" style="color: red;"></div>
-    
+    <div id="formError" style="color: red"></div>
+
     <!-- Задача 5: Динамічне додавання елементів -->
     <ul id="itemList">
-        <li>Елемент 1</li>
-        <li>Елемент 2</li>
+      <li>Елемент 1</li>
+      <li>Елемент 2</li>
     </ul>
     <button id="addItemBtn">Додати елемент</button>
-    
+
     <!-- Задача 6: Приховування та відображення елементів -->
     <div id="toggleDiv">Цей текст можна приховати</div>
     <button id="toggleBtn">Приховати</button>
-    
+
     <!-- Задача 7: Анімація елемента -->
     <div id="movingBox"></div>
     <button id="moveBtn">Перемістити</button>
-    
+
     <!-- Задача 8: Перемикання теми -->
     <button id="themeSwitcher">Змінити тему</button>
-    
+
     <!-- Задача 9: Зміна розміру тексту -->
     <div id="resizableText">Цей текст можна змінити</div>
     <button id="increaseTextBtn">Збільшити</button>
     <button id="decreaseTextBtn">Зменшити</button>
-    
+
     <!-- Задача 10: Автоматичне оновлення часу -->
     <div id="time"></div>
     <script src="/js/html-js-tasks2.js" type="module"></script>
-</body>
+  </body>
 </html>
-
