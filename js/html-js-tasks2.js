@@ -17,3 +17,57 @@ const pushTwoTask = (event) => {
     spanTaskTwo.textContent = counterTwo;
 }
 btnTaskTwo.addEventListener("click", pushTwoTask);
+
+//task 3 3. Зміна кольору фону при наведенні
+// Створи елемент div, і напиши код, який змінюватиме колір фону div при наведенні на нього миші. Після того, як миша залишає елемент, фон має повертатися до початкового стану.
+
+const divThree = document.querySelector('#colorBox');
+
+
+const callback = (event) => {
+    divThree.style.backgroundColor = "orange";
+    
+}
+
+const changeColor = (event) => {
+    event.target.style = `
+    background-color:#e75b1e;
+    border-radius: 25px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 2.1);
+    transition: background-color 3000ms ease `
+}
+
+const callbackTwo = (event) => {
+    divThree.style.backgroundColor = "lightblue";
+
+}
+divThree.addEventListener("mouseover", changeColor);
+// divThree.addEventListener("mouseover", callback);
+divThree.addEventListener("mouseout", callbackTwo);
+
+// 4. Валідація форми
+// Створи просту HTML-форму з полями для введення імені та електронної пошти. Напиши скрипт, який перевірятиме, чи поля не порожні після натискання кнопки "Відправити". Якщо поле порожнє — показуй повідомлення про помилку.
+
+const formTwo = document.querySelector("#myForm");
+const error = document.querySelector('#formError');
+
+
+
+// const send = document.querySelector("[button type="submit"]");
+
+const handleValid = (event) => {
+    event.preventDefault();
+    const form = event.target;
+    const inputValue = form.elements.nameInput.value;
+    const inputValue2 = form.elements.emailInput.value;
+    if (!inputValue || !inputValue2 ) {
+        error.textContent = "Fill the gaps!"
+        error.style.color = "red";
+
+    } else {
+        error.style.color = "green";
+        error.textContent = "You are welcome!";
+
+    }
+}
+formTwo.addEventListener('submit', handleValid);
