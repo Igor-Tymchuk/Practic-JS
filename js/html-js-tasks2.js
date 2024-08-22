@@ -71,3 +71,27 @@ const handleValid = (event) => {
     }
 }
 formTwo.addEventListener('submit', handleValid);
+
+/*5. Динамічне додавання елементів
+Створи список (ul). Додай кнопку, при натисканні на яку до списку буде додаватися новий елемент li з текстом "Новий елемент".
+
+6. Приховування та відображення елементів
+Створи текстовий елемент div та кнопку. Напиши скрипт, який приховуватиме div при натисканні на кнопку. Якщо div приховано, кнопка повинна змінювати текст на "Показати" і навпаки.
+*/
+
+const itemList = document.querySelector('#itemList');
+const btnPush = document.querySelector('#addItemBtn');
+
+function addNewElement() {
+    /*
+    const item = document.createElement('li');
+    item.textContent = 'New Element';
+    itemList.append(item);*/
+
+    itemList.insertAdjacentHTML("beforeend",
+        "<li>New Element</li>"
+    )
+}
+
+
+btnPush.addEventListener('click', addNewElement);
