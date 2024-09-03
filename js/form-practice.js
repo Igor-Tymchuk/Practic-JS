@@ -9,7 +9,7 @@ const formData = {
 };
 const form = document.querySelector(".registration-form");
 
-if (localStorage.data) {
+if (localStorage.getItem("data")) {
     const reserved = JSON.parse(localStorage.data);
     for (const key in reserved) {
         formData[key] = reserved[key];
