@@ -15,9 +15,6 @@ if (localStorage.getItem("data")) {
         formData[key] = reserved[key];
         form[key].value = reserved[key];
     }
-    console.log("reserved:", reserved)
-    
-    console.log("formData:", formData)
     }
 
 
