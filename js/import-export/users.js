@@ -1,5 +1,5 @@
-const user = {
-    name: 'Pedro',
-    age: 30,
-    email: 'pedro@example.com'
+export const user = {
+  name: "Pedro",
+  age: 30,
+  email: "pedro@example.com",
 };
