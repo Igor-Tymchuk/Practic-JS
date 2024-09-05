@@ -1,7 +1,7 @@
-function square(num) {
+export function square(num) {
     return num * num;
 }
 
-function cube(num) {
+export function cube(num) {
     return num * num * num;
 }
