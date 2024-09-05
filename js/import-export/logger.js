@@ -1,3 +1,3 @@
-function log(message) {
+export  default function log(message) {
     console.log(`Лог: ${message}`);
 }

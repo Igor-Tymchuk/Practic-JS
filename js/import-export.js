@@ -32,3 +32,13 @@
 import { user as person } from "./import-export/users.js";
 
 // console.log(person.email);
+
+
+/*3
+
+import log from "./import-export/logger.js";
+log('Bonjour log')
+
+import { Person } from "./import-export/person.js";
+const artur = new Person('Artur', '27');
+console.log(artur.introduce());*/
