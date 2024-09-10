@@ -93,17 +93,17 @@
 // Поради:
 // Використовуй прості умови в методі isAdult() для перевірки віку.
 // Метод greet() можна легко реалізувати за допомогою шаблонних рядків.
-// class User { 
-//     constructor(name, age, email) { 
+// class User {
+//     constructor(name, age, email) {
 //         this.name = name;
 //         this.age = age;
 //         this.email = email;
 //     }
 
-//     greet() { 
+//     greet() {
 //         return `Hi, I'm ${this.name}!`;
 //     }
-//     isAdult() { 
+//     isAdult() {
 //         if (this.age >= 18) return true;
 //         else return false;
 //     }
@@ -114,3 +114,64 @@
 // console.log(user);
 // console.log(user.greet());
 // console.log(user.isAdult());
+
+
+
+
+// 1. Таймер на промисах
+// Задача: Напишите функцию, которая возвращает промис, разрешающийся через определённое количество миллисекунд.
+// Подсказка: Используйте setTimeout внутри промиса для создания задержки.
+
+const number = 1;
+// function test(qqq) {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             if (qqq === 1) resolve(alert('hello'));
+//             else reject("ppc");
+//         }, 3000)
+//     });
+// }
+// console.log(test(2));
+
+
+// 2. Цепочка промисов
+// Задача: Создайте цепочку промисов, где каждый следующий промис разрешается через одну секунду, выводя сообщение в консоль.
+// Подсказка: Используйте .then() для создания цепочек промисов. Здесь важно знать, что каждый .then() возвращает новый проми
+
+
+// const test = new Promise((resolve, reject) => {
+//     setTimeout(() => resolve('after 1 move'),1000)
+// })
+// test.then((result) => { console.log(result); return 'after 2 move'})
+
+// .then((result) => { console.log(result); return 'after 3 move' })
+
+// .then((result) => { console.log(result); return 'after 4 move'})
+
+// new Promise(resolve => setTimeout(resolve, 1000))
+//     .then(() => { console.log("1 sec"); return new Promise(resolve => setTimeout(resolve, 1000)); })
+//     .then(() => { console.log("2 sec"); return new Promise(resolve => setTimeout(resolve, 1000)); })
+//     .then(() => { console.log("3 sec"); return new Promise(resolve => setTimeout(resolve, 1000)); })
+//     .then(() => { console.log("4 sec"); return new Promise(resolve => setTimeout(resolve, 1000)); })
+//     .then(() => { console.log("5 sec"); return new Promise(resolve => setTimeout(resolve, 1000)); })
+//     .then(() => { console.log("6 sec"); return new Promise(resolve => setTimeout(resolve, 1000)); })
+
+
+
+
+// function test(seconds) {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             resolve('Promise after 1 sec');
+//         })
+//     }}
+// test()
+//     .then(result => { 
+//         console.log();
+//     })
+//         .then(result => { 
+//         console.log();
+//         })
+//         .then(result => { 
+//         console.log();
+//     })
