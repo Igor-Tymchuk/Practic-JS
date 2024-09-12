@@ -454,3 +454,40 @@
 // rect.height = 5;
 // console.log(rect.getArea()); // 50
 // console.log(rect.getPerimeter()); // 30
+
+
+// 3. Множественные промисы
+// Задача: Создайте три промиса, каждый из которых разрешается через разное количество времени. Используйте Promise.all, чтобы выполнить их параллельно и вывести результат, когда они все завершатся.
+// Совет: Используйте Promise.all, если хотите дождаться выполнения всех промисов. Он полезен, когда нужно выполнять несколько задач одновременно и дождаться результата всех сразу.
+
+// const promise1 = new Promise((resolve, reject) => {
+//     setTimeout(() => resolve('fulfilled'), 4000)
+// });
+// const promise2 = new Promise((resolve, reject) => {
+//     setTimeout(() => reject('rejected'), 2000)
+// });
+// const promise3 = new Promise((resolve, reject) => {
+//     setTimeout(() => resolve('fulfilled'), 3000)
+// });
+
+// const allPromises = Promise.all([promise1,promise2,promise3])
+// .then((promises) => {console.log(promises)}).catch((error) => {console.log(error);
+// })
+// console.log("allPromises:", allPromises);
+
+// 6. Асинхронное получение данных
+// Задача: Напишите функцию, которая возвращает промис, симулирующий получение данных с сервера через 2 секунды. Используйте setTimeout для задержки.
+// Совет: Используйте промис для имитации работы с асинхронными запросами. В реальных приложениях асинхронные операции часто используются для работы с сетью.
+
+// const number = Math.random() > 0.5;
+// console.log("number:", number);
+
+// const promiseFunction = (number) => {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             if (number) console.log("successful");
+//             else console.log("failed");
+//         }, 2000)
+//     })
+// }
+// promiseFunction(number);
