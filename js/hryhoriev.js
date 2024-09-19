@@ -166,12 +166,95 @@ const number = 1;
 //         })
 //     }}
 // test()
-//     .then(result => { 
+//     .then(result => {
 //         console.log();
 //     })
-//         .then(result => { 
+//         .then(result => {
 //         console.log();
 //         })
-//         .then(result => { 
+//         .then(result => {
 //         console.log();
 //     })
+
+
+
+
+
+//
+
+// Завдання 4: Запит із параметрами
+// Опис: Зроби GET-запит із параметрами для фільтрації даних. Наприклад, отримай користувача з ім'ям "Leanne Graham".
+// Додай параметри до URL для фільтрації користувачів.
+// Виведи результат у консоль.
+// Підказка:
+// Параметри можна додавати до URL через рядок запиту (наприклад, ?name=Leanne).
+// Використовуй .then() для обробки відповіді та перетворення її у JSON.
+
+
+
+// fetch('https://jsonplaceholder.typicode.com/users/?username=Bret')
+//     .then(response => response.json())
+//     .then(data => {
+//         console.log(data);
+//     })
+//     .catch(error => {
+//         console.log('error user ne naiden', error);
+//     });
+
+// Завдання 5: Послідовні запити
+// Опис: Спочатку отримай список користувачів із сервера, а потім зроби запити для отримання постів кожного користувача.
+// Зроби GET-запит для отримання списку користувачів (https://jsonplaceholder.typicode.com/users).
+// Використовуючи .then(), для кожного користувача відправ окремий запит, щоб отримати його пости (наприклад, через https://jsonplaceholder.typicode.com/posts).
+// Підказка:
+// Після отримання списку користувачів із сервера, використовуй цикл для відправки додаткових запитів на отримання постів кожного користувача.
+// Оброби кожну відповідь за допомогою .then().
+
+// let usersData = [];
+// const users = fetch('https://jsonplaceholder.typicode.com/users')
+//     .then(response => response.json())
+//     .then(data => {
+//         usersData = data;
+//             for (const user of usersData) {
+//                 fetch(`https://jsonplaceholder.typicode.com/posts/?userId=${user.id}`)
+//                     .then(response => response.json())
+//                     .then(data => {
+//                         console.log(data);
+//                     })
+//             }
+// })
+//      .catch(error => {
+//         console.log('error user ne naiden', error);
+//      });
+
+
+// function getUsers(data) {
+//     fetch("https://jsonplaceholder.typicode.com/users")
+//         .then((response) => response.json())
+//         .then((data) => {
+//             for (let i = 0; i < data.length; i++) {
+//                 fetch(`https://jsonplaceholder.typicode.com/posts?userId=${data[i].id}`)
+//           .then((response) => response.json())
+//                         .then((data) => console.log(data))
+//                         .catch((error) => console.error(error));
+//             }
+//         })
+//         .catch((error) => console.error(error));
+// }
+// getUsers();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
