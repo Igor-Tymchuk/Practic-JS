@@ -491,3 +491,47 @@
 //     })
 // }
 // promiseFunction(number);
+
+// 1. Простий GET-запит
+// Створи функцію fetchUserData(), яка виконує GET-запит до API для отримання даних користувача за 
+// URL: https://jsonplaceholder.typicode.com/users/1. Після отримання відповіді, 
+// виведи ім'я користувача у консоль.
+
+// const fetchUserData = () => {
+//     return fetch("https://jsonplaceholder.typicode.com/users/1")
+//     .then(response => {
+//         if(!response.ok){
+//             throw new Error("Error");
+//         };
+//         return response.json();
+//     })
+// }
+// fetchUserData().then(data => console.log(data));
+
+// 2. POST-запит для додавання нового користувача
+// Напиши функцію createUser(), яка відправляє POST-запит для створення нового 
+// користувача за допомогою URL: https://jsonplaceholder.typicode.com/users. 
+// Дані нового користувача мають виглядати так:
+// {
+//     name: "John Doe",
+//     email: "johndoe@example.com"
+//   }
+//   Після успішного запиту, виведи ID створеного користувача у консоль
+
+const createUser = () => {
+    return fetch("https://jsonplaceholder.typicode.com/users", {
+        method: "POST",
+        body: JSON.stringify({
+            name: "John Doe",
+            email: "johndoe@example.com"
+        })
+    })
+        .then(response => {
+        if(!response.ok){
+            throw new Error("Error");
+        };
+        return response.json();
+    })
+}
+
+createUser().then(data => console.log(data));
