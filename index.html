@@ -4,12 +4,32 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JS Practice</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
+  integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<link rel="stylesheet" href="./css/styles.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700&display=swap"
+  rel="stylesheet" />
   </head>
   <body>
+
+<header class="navigation">
+  <button type="button" class="button-footer menu">Practic-JS</button>
+  <div>
+    <span>Hello, Anonymous!</span>
+    <button type="button" class="button-footer reg-log">Login</button>
+  </div>
+  <span class="time button-footer">Time: 12:00</span>
+</header>
+<main>
+  <div class="modal-overlay">
     <!-- ✔️ or ❌ -->
     <h2>JS Practice FSON-109</h2>
     <p>Choose the developer name</p>
-    <ol>
+    <ol class="list-dev">
       <li><a href="./tasks/tymchuk.html">Igor-Tymchuk</a></li>
       <li><a href="./tasks/luniaka.html">Artur-Luniaka</a></li>
       <li><a href="./tasks/task-03-yuriim-owl.html">yuriim-owl</a></li>
@@ -32,5 +52,32 @@
       <li><a href="./tasks/task-20.html">Vacant</a></li>
     </ol>
     </ul>
+  </div>
+  <div class="reg-log-overlay">
+    <form class="register none">
+      <p>Register</p>
+      <label>Enter Nickname<input type="text"></label>
+      <label>Enter Password<input type="password"></label>
+      <label>Confirm Password<input type="password"></label>
+      <button type="submit" class="button-footer">Register!</button>
+    </form>
+    <form class="login">
+      <p>Login</p>
+      <label>Enter Nickname<input type="text"></label>
+      <label>Enter Password<input type="password"></label>
+      <button type="submit" class="button-footer">Login</button>
+      
+    </form>
+    <button type="button" class="swap-form">or Register!</button>
+  </div>
+  <ul>
+
+  </ul>
+</main>
+<footer class="navigation">
+  <p>Created by command developers from JSON-109!</p>
+</footer>
+
+<script type="module" src="main.js"></script>
   </body>
 </html>
