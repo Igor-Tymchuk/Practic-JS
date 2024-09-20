@@ -17,14 +17,16 @@
   <body>
 
 <header class="navigation">
-  <button type="button" class="button-footer menu">Practic-JS</button>
+  <button type="button" class="btn-style menu">Practic-JS</button>
   <div>
     <span>Hello, Anonymous!</span>
-    <button type="button" class="button-footer reg-log">Login</button>
+    <button type="button" class="btn-style reg-log">Login</button>
   </div>
-  <span class="time button-footer">Time: 12:00</span>
+  <span class="time btn-style">Time: 12:00</span>
 </header>
 <main>
+
+
   <div class="modal-overlay">
     <!-- ✔️ or ❌ -->
     <h2>JS Practice FSON-109</h2>
@@ -52,24 +54,32 @@
       <li><a href="./tasks/task-20.html">Vacant</a></li>
     </ol>
     </ul>
+
+
   </div>
   <div class="reg-log-overlay">
     <form class="register none">
-      <p>Register</p>
-      <label>Enter Nickname<input type="text"></label>
-      <label>Enter Password<input type="password"></label>
-      <label>Confirm Password<input type="password"></label>
-      <button type="submit" class="button-footer">Register!</button>
+      <h3>Register</h3>
+      <label>Enter Nickname<input type="text" id="nickname" name="nickname"></label>
+      <label>Enter Password<input type="password" id="password" name="password"></label>
+      <label>Confirm Password<input type="password" id="confirmPass" name="confirmPass"></label>
+      <button type="submit" class="btn-style">Register!</button>
     </form>
     <form class="login">
-      <p>Login</p>
-      <label>Enter Nickname<input type="text"></label>
-      <label>Enter Password<input type="password"></label>
-      <button type="submit" class="button-footer">Login</button>
-      
+      <h3>Login</h3>
+      <label>Enter Nickname<input type="text" id="nickname" name="nickname"></label>
+      <label>Enter Password<input type="password"  id="password" name="password"></label>
+      <button type="submit" class="btn-style">Login</button>
     </form>
-    <button type="button" class="swap-form">or Register!</button>
+    <button type="button" class="swap-form btn-style">or Register</button>
   </div>
+  <div class="users"><h3>Registered Users:</h3>
+  <ul>
+    <li>Pedro</li>
+    <li>Sebastian</li>
+  </ul>
+  </div>
+
   <ul>
 
   </ul>

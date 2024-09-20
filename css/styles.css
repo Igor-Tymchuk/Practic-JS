@@ -32,7 +32,6 @@ button {
   padding: 0;
 }
 
-/* Загальниі класи для Body */
 body {
   font-family: Roboto, sans-serif;
   font-weight: 400;
@@ -47,11 +46,9 @@ body {
 main {
   min-height: calc(100vh - 140px);
   display: flex;
-  align-items: center;
-  justify-content: space-between;
   flex-direction: row;
-  width: 1200px;
-  min-width: 800px;
+width: 90%;
+min-width: 600px;
   padding: 8px;
   border: solid 1px #4d5ae555;
   background-color: #dad9e9;
@@ -78,6 +75,7 @@ main {
       visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   .reg-log-overlay {
+    padding: 20px;
     background-color: rgba(46, 47, 66, 0.7);
     border-radius: 5px;
     position: fixed;
@@ -85,11 +83,11 @@ main {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 400px;
-    height: 600px;
+    height: 400px;
     z-index: 999;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     opacity: 0;
     pointer-events: none;
@@ -126,8 +124,8 @@ main {
   align-items: center;
   justify-content: space-between;
   flex-direction: row;
-  width: 1200px;
-  min-width: 800px;
+  width: 90%;
+  min-width: 600px;
   padding: 8px;
   border: solid 1px #4d5ae5;
   background-color: #2e2f42;;
@@ -143,7 +141,7 @@ footer.navigation{
 display: flex;
 justify-content: center;}
 
-.button-footer {
+.btn-style {
     font-family: "Roboto", sans-serif;
     border: none;
     border-radius: 4px;
@@ -164,13 +162,13 @@ justify-content: center;}
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     cursor: pointer;
   }
-  .button-footer.time {
+  .btn-style.time {
     background-color: #2e2f42;
     border: 2px solid #404bbf55;
   }
 
-  .button-footer:hover,
-  .button-footer:focus {
+  .btn-style:hover,
+  .btn-style:focus {
     cursor: pointer;
     background-color: #4d5ae5;
   }
@@ -178,6 +176,7 @@ form {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    width: 80%;
 }
 label {
     margin: 5px;
@@ -186,7 +185,42 @@ label {
 input {
     margin: 5px;
     display: block;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 4px;
+  width: 100%;
+  height: 40px;
+  padding: 11px 16px 11px 38px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  background-color: transparent;
+  outline: transparent;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+input:focus-within {
+  border: 1px solid #1904d8;
+  outline: transparent;
+  background-color: #ffffff;
 }
 .none {
     display: none;
+}
+.users {
+  background-color: #2e2f42;
+  border-radius: 5px;
+  padding: 10px;
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.users ul {
+  margin-top: 30px;
+  display: flex;
+  width: 90%;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
 }
