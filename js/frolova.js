@@ -1,6 +1,6 @@
 /*Перевірка анаграм
 Напишіть функцію areAnagrams, яка приймає два рядки і повертає true, якщо це анаграми (містять однакові символи у різному порядку), і false в іншому випадку.
-*//*
+*/ /*
 function areAnagrams(str1, str2) {
   const stringArray1 = str1.split("").sort();
   const stringArray2 = str2.split("").sort();
@@ -83,7 +83,7 @@ const products = [
 
 const nameProducts = (arr) => arr.map((item) => item.name);
 // ["Laptop", "Shoes", "Coffee Machine"]
-/* *//*
+/* */ /*
 2
 Дан массив объектов orders, где каждый объект содержит идентификатор
  заказа, массив товаров (название и количество) и статус заказа.
@@ -145,7 +145,7 @@ const studentsNames = (arr) => arr
 // Напишіть функцію convertToKeyValue,
 яка приймає масив об'єктів та назви двох властивостей,
 та повертає об'єкт, де ключі - значення однієї властивості, а значення - значення іншої властивості.
-*//*
+*/ /*
 let employees = [
     { id: 1, name: "Emma", department: "HR" },
     { id: 2, name: "Liam", department: "IT" },
@@ -167,4 +167,32 @@ const groupArray = (employees, department) => employees.reduce((acc, employee) =
     }, {});
   }
 
-console.log(groupArray)*/
+console.log(groupArray)
+3. Асинхронне очікування декількох запитів
+Створи функцію fetchMultipleUsers(), яка паралельно виконує GET-запити для 
+отримання даних про трьох користувачів (ID 1, 2, 3) з https://jsonplaceholder.typicode.com/users. 
+Використовуй Promise.all(), щоб обробити всі відповіді одночасно. Виведи імена всіх користувачів
+у консоль після отримання відповідей.*/
+
+function fetchMultipleUsers() {
+  const urls = [
+    "https://jsonplaceholder.typicode.com/users/1",
+    "https://jsonplaceholder.typicode.com/users/2",
+    "https://jsonplaceholder.typicode.com/users/3",
+  ];
+
+  const newL = urls.map((url) =>
+    fetch(url).then((response) => response.json())
+  );
+  console.log(newL);
+
+  Promise.all(newL)
+    .then((users) => {
+      users.forEach((user) => console.log(user.name));
+    })
+    .catch((error) => {
+      console.log("Error", error);
+    });
+}
+
+fetchMultipleUsers();
