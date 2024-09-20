@@ -5,12 +5,23 @@ const openMenu = () => {
     regLogWindow.classList.remove("is-open");
 }
 
+
 const regLogBtn = document.querySelector(".reg-log");
 const regLogWindow = document.querySelector(".reg-log-overlay");
 const openRegWindow = () => {
     regLogWindow.classList.toggle("is-open");
     menuList.classList.remove("is-open");
 }
+document.addEventListener('click', (event) => {
+    if (regLogWindow.classList.contains("is-open") && !regLogWindow.contains(event.target)) {
+        regLogWindow.classList.remove("is-open");
+    }
+    if (menuList.classList.contains("is-open") && !menuList.contains(event.target)) {
+        menuList.classList.remove("is-open");
+    }
+}, true);
+
+
 regLogBtn.addEventListener("click", openRegWindow);
 
 const swapBtn = document.querySelector(".swap-form");

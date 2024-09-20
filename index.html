@@ -75,14 +75,43 @@
   </div>
   <div class="users"><h3>Registered Users:</h3>
   <ul>
-    <li>Pedro</li>
-    <li>Sebastian</li>
+    <li class="reg-user">Pedro</li>
+    <li class="reg-user">Sebastian</li>
   </ul>
   </div>
-
-  <ul>
-
+  <ul class="chat">
+    <li class="message">
+      <div class="head"><p>Armando</p>
+      <span>12:30 (12.11.2024)</span></div>
+      <p class="text">Hello! Where are you from?</p>
+      <div class="control"><a href="" class="edit">EDIT</a><a href="" class="del">DELETE</a></div>
+    </li>
+    <li class="message">
+      <div class="head"><p>Daniel</p>
+      <span>12:31 (12.11.2024)</span></div>
+      <p class="text">Hi! I'm from Zimbabwe!</p>
+      <div class="control"><a href="" class="edit">EDIT</a><a href="" class="del">DELETE</a></div>
+    </li>
+    <li class="message">
+      <div class="head"><p>Jordan</p>
+      <span>12:32 (12.11.2024)</span></div>
+      <p class="text">Pizdish!</p>
+      <div class="control"><a href="" class="edit">EDIT</a><a href="" class="del">DELETE</a></div>
+    </li>
+    <li class="message">
+      <div class="head"><p>Daniel</p>
+      <span>12:33 (12.11.2024)</span></div>
+      <p class="text">Chesne slovo!!!</p>
+      <div class="control"><a href="" class="edit">EDIT</a><a href="" class="del">DELETE</a></div>
+    </li>
   </ul>
+  <div class="message-form users">
+    <form class="send">
+      <label>Input your message:
+      <textarea name="textarea" id="textarea" class="textarea"></textarea></label>
+      <button type="submit" class="send-btn btn-style">Send message</button>
+    </form>
+  </div>
 </main>
 <footer class="navigation">
   <p>Created by command developers from JSON-109!</p>
