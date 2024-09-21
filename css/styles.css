@@ -270,6 +270,13 @@ input:focus-within {
   outline: transparent;
   background-color: #ffffff;
 }
+.textarea:hover::placeholder {
+  color: gray;
+}
+.textarea::placeholder {
+  color: black;
+}
+
 .message {
   box-shadow: 10px 10px 20px 5px rgba(0, 0, 0, 0.5);
   margin-bottom: 5px;
@@ -380,4 +387,13 @@ input:focus-within {
     font-size: 12px;
   }
 }
-  
+  [disabled] {
+    background-color: grey;
+    color: black;
+    border: solid 1px black;
+  }
+  [disabled]:hover {
+    background-color: black;
+    color: grey;
+    border: solid 1px grey;
+  }
