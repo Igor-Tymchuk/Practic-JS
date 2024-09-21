@@ -45,16 +45,17 @@ body {
 }
 main {
   box-shadow: 10px 10px 20px 5px rgba(0, 0, 0, 0.5);
-  min-height: calc(100vh - 140px);
+  height: auto;
   display: flex;
   flex-direction: row;
+  justify-content: flex-end;
   width: 90%;
+  min-height: 85vh;
   min-width: 600px;
   padding: 8px;
   border: solid 1px #4d5ae555;
   background-color: #47475e;
   border-radius: 5px;
-  height: 55px;
 }
 .modal-overlay {
   box-shadow: 10px 10px 20px 5px rgba(0, 0, 0, 0.5);
@@ -64,7 +65,7 @@ main {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 400px;
+  width: 320px;
   height: 600px;
   z-index: 999;
   display: flex;
@@ -85,7 +86,7 @@ main {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 400px;
+  width: 320px;
   height: 400px;
   z-index: 999;
   display: flex;
@@ -134,10 +135,11 @@ main {
   padding: 8px;
   background-color: #2e2f42;
   border-radius: 5px;
-  height: 70px;
+  margin: 2px 0;
 }
-.navigation div span {
+.navigation div {
   display: flex;
+  flex-direction: column;
   justify-content: center;
 }
 
@@ -152,7 +154,6 @@ footer.navigation {
   border: none;
   border-radius: 4px;
   padding: 8px 24px;
-  min-width: 165px;
   height: 40px;
   background: #404bbf;
   font-weight: 500;
@@ -166,7 +167,7 @@ footer.navigation {
   justify-content: center;
   flex-direction: row;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
 }
 .btn-style.time {
@@ -200,7 +201,6 @@ input {
   height: 40px;
   padding: 11px 16px;
   font-weight: 400;
-  font-size: 16px;
   line-height: 1.17;
   letter-spacing: 0.04em;
   background-color: #66798d;
@@ -257,7 +257,6 @@ input:focus-within {
   height: 240px;
   padding: 11px 16px;
   font-weight: 400;
-  font-size: 16px;
   line-height: 1.17;
   letter-spacing: 0.04em;
   background-color: #8082c9;
@@ -348,3 +347,37 @@ input:focus-within {
   border-radius: 10px;
   box-shadow: 10px 10px 20px 5px rgba(0, 0, 0, 0.5);
 }
+
+@media (max-width: 599px) {
+  .users-div {
+    display: none;
+  }
+  .navigation {
+    min-width: 320px;
+  }
+  main {
+    flex-direction: column-reverse;
+    min-width: 320px;
+  }
+  .chat{
+    width: 100%;
+    margin: 0px;
+  }
+  .message-form {
+    width: 100%;
+  }
+  .textarea {
+    height: 150px;
+  }
+  .btn-style {
+    padding: 8px 5px;
+    margin: 2px;
+  }
+  body, .btn-style {
+    font-size: 14px;
+  }
+  .edit, .del {
+    font-size: 12px;
+  }
+}
+  
