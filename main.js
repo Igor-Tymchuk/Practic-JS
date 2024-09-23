@@ -9,6 +9,11 @@ const openMenu = () => {
 const regLogBtn = document.querySelector(".reg-log");
 const regLogWindow = document.querySelector(".reg-log-overlay");
 const openRegWindow = () => {
+    if(document.querySelector('.reg-log').textContent === "Log Out") {
+        localStorage.removeItem("user");
+        window.location.reload();
+        return;
+    }
     regLogWindow.classList.toggle("is-open");
     menuList.classList.remove("is-open");
 }
@@ -49,3 +54,4 @@ currentDate();
 import { getData } from "./api.js";
 import { renderUsers } from "./render.js";
 import { iziInfo } from "./izi.js";
+import { handleReg } from "./reg.js";

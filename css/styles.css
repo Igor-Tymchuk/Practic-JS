@@ -146,6 +146,11 @@ footer.navigation {
   display: flex;
   justify-content: center;
 }
+.welcome-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .btn-style {
   box-shadow: 10px 10px 20px 5px rgba(0, 0, 0, 0.5);
