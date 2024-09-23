@@ -34,7 +34,7 @@ const swapForm = () => {
 swapBtn.addEventListener("click", swapForm);
 menuBtn.addEventListener("click", openMenu);
 
-const currentDate = () => {
+export const currentDate = () => {
     const now = new Date();
     const hours = now.getHours().toString().padStart(2, '0');
     const minutes = now.getMinutes().toString().padStart(2, '0');
@@ -47,8 +47,5 @@ const currentDate = () => {
 currentDate();
 
 import { getData } from "./api.js";
-getData("users");
-getData("posts");
-
+import { renderUsers } from "./render.js";
 import { iziInfo } from "./izi.js";
-

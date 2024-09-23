@@ -282,10 +282,11 @@ input:focus-within {
   width: 100%;
   border-radius: 10px;
   overflow: hidden;
-  border: solid 1px #57537a;
+  border: solid 3px #5c6272;
   background-color: #5c6272;
 }
 .message:nth-child(odd) {
+  border: solid 3px rgb(65, 78, 92);
   background-color: rgb(65, 78, 92);
 }
 
@@ -294,7 +295,8 @@ input:focus-within {
   justify-content: space-between;
   background-color: #2e2f42;
   padding: 8px;
-  border-bottom-left-radius: 10px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
 }
 .text {
   padding: 8px;
@@ -312,16 +314,14 @@ input:focus-within {
   border-radius: 8px;
   align-items: center;
   justify-content: center;
-  font-size: 14px;
+  font-size: 10px;
   color: #fcfcfc;
   padding: 5px;
   background-color: rgb(196, 48, 48);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .del:hover {
   background-color: red;
-  transform: rotate(10deg);
 }
 .edit {
   display: flex;
@@ -330,16 +330,14 @@ input:focus-within {
   border-radius: 8px;
   align-items: center;
   justify-content: center;
-  font-size: 14px;
+  font-size: 10px;
   color: #fcfcfc;
   padding: 5px;
   background-color: rgb(196, 115, 48);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .edit:hover {
   background-color: orangered;
-  transform: rotate(10deg);
 }
 .reg-user
 { display: flex;
@@ -385,9 +383,6 @@ input:focus-within {
   }
   body, .btn-style {
     font-size: 14px;
-  }
-  .edit, .del {
-    font-size: 12px;
   }
 }
   [disabled] {
