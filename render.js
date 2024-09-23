@@ -12,7 +12,7 @@ export const renderPosts = async () => {
     const render = posts.data.map((post) => `      <li class="message">
         <div class="head">
           <p>${post.sender}</p>
-          <span>${currentDate()}</span>
+          <span>${post.time}</span>
         </div>
         <p class="text">${post.text}</p>
         <div class="control"><a href="" class="edit">EDIT</a><a href="" class="del">DELETE</a></div>
