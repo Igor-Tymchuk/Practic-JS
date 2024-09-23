@@ -50,17 +50,18 @@ const handleLog = async (event) => {
     const nickname = event.currentTarget.elements.nickname.value.trim();
     const password = event.currentTarget.elements.password.value;
     const users = await getData("users");
-    const user = users.data.find(user => user.name === nickname);
+    const user = users.data.find(user => user.name.toLowerCase() === nickname.toLowerCase());
+    if (!user) return iziError(`User ${nickname} unregistered!`);
     if (user.password === password) {
         const logUser = {
-            name: nickname,
+            name: user.name,
             password: password,
             posts: user.posts,
         }
         localStorage.setItem('user', JSON.stringify(logUser));
         window.location.reload()
     }
-    else return iziError("Wrong name or password!");
+    else return iziError("Wrong password!");
 }
 
 logForm.addEventListener("submit", handleLog);
