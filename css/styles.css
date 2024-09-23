@@ -52,7 +52,6 @@ main {
   width: 90%;
   min-height: 85vh;
   min-width: 600px;
-  padding: 8px;
   border: solid 1px #4d5ae555;
   background-color: #47475e;
   border-radius: 5px;
@@ -152,7 +151,7 @@ footer.navigation {
   box-shadow: 10px 10px 20px 5px rgba(0, 0, 0, 0.5);
   font-family: "Roboto", sans-serif;
   border: none;
-  border-radius: 4px;
+  border-radius: 10px;
   padding: 8px 24px;
   height: 40px;
   background: #404bbf;
@@ -252,7 +251,7 @@ input:focus-within {
   resize: none;
   display: block;
   border: 1px solid rgba(46, 47, 66, 0.4);
-  border-radius: 4px;
+  border-radius: 10px;
   width: 100%;
   height: 240px;
   padding: 11px 16px;
@@ -262,7 +261,7 @@ input:focus-within {
   background-color: #8082c9;
   outline: transparent;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .textarea:focus-within {
@@ -284,7 +283,7 @@ input:focus-within {
   border-radius: 10px;
   overflow: hidden;
   border: solid 1px #57537a;
-  background-color: #7a7b7c;
+  background-color: #5c6272;
 }
 .message:nth-child(odd) {
   background-color: rgb(65, 78, 92);
@@ -296,7 +295,6 @@ input:focus-within {
   background-color: #2e2f42;
   padding: 8px;
   border-bottom-left-radius: 10px;
-  box-shadow: 10px 10px 20px 5px rgba(0, 0, 0, 0.5);
 }
 .text {
   padding: 8px;
@@ -305,8 +303,6 @@ input:focus-within {
   display: flex;
   gap: 10px;
   justify-content: end;
-  background-color: #2e2f42;
-  border-top-right-radius: 10px;
   padding: 2px 10px;
 }
 .del {
@@ -349,10 +345,15 @@ input:focus-within {
 { display: flex;
   align-items: center;
   justify-content: center;
-  width: 80%;
+  width: 90%;
   height: 35px;
   border-radius: 10px;
-  box-shadow: 10px 10px 20px 5px rgba(0, 0, 0, 0.5);
+  border: dashed 1px #fcfcfc;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.reg-user:hover {
+  box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.5);
+  background-color:#47475e;
 }
 
 @media (max-width: 599px) {
@@ -360,10 +361,12 @@ input:focus-within {
     display: none;
   }
   .navigation {
+    width: 100%;
     min-width: 320px;
   }
   main {
     flex-direction: column-reverse;
+    width: 100%;
     min-width: 320px;
   }
   .chat{

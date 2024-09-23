@@ -46,5 +46,9 @@ const currentDate = () => {
 }
 currentDate();
 
+import { getData } from "./api.js";
+getData("users");
+getData("posts");
 
+import { iziInfo } from "./izi.js";
 
