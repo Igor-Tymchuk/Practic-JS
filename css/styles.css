@@ -274,7 +274,7 @@ input:focus-within {
   outline: transparent;
   background-color: #ffffff;
 }
-.textarea:hover::placeholder {
+[disabled].textarea:hover::placeholder {
   color: gray;
 }
 .textarea::placeholder {
