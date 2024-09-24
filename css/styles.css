@@ -400,3 +400,9 @@ input:focus-within {
     color: grey;
     border: solid 1px grey;
   }
+
+  .eye-password{
+    cursor: pointer;
+    color: grey;
+    font-size: small;
+  }
