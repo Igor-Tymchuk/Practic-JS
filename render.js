@@ -16,7 +16,7 @@ export const renderPosts = async () => {
           <span>${post.time}</span>
         </div>
         <p class="text">${post.text}</p>
-        <div class="control"><a href="" class="edit">EDIT</a><a href="" class="del">DELETE</a></div>
+        <div class="control"><button type="button" class="edit">EDIT</button><button type="button" id="${post.id}" class="del">DELETE</button></div>
       </li>`).join("");
     document.querySelector(".chat").innerHTML = render;
 }

@@ -59,7 +59,7 @@ export const currentDate = () => {
 };
 currentDate();
 
-import { getData, addNewUser } from "./api.js";
+import { getData, addNewUser, deleteData } from "./api.js";
 import { renderUsers } from "./render.js";
 import { iziInfo } from "./izi.js";
 import { handleReg } from "./reg.js";
@@ -87,4 +87,20 @@ function sendPost(event) {
       window.location.reload();
     })
     .catch((error) => console.log(error));
-}
+};
+
+const chatList = document.querySelector('.chat');
+
+function deletePost(event) {
+  const messageId = event.target.id;
+  if (!event.target.classList.contains('del')) return;
+  deleteData('posts', messageId)
+    .then((response) => {
+      console.log("response:", response);
+
+      window.location.reload();
+    })
+    .catch((error) => console.log(error));
+};
+chatList.addEventListener('click', deletePost);
+
