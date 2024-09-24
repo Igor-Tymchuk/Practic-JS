@@ -1,5 +1,4 @@
 import { getData } from "./api.js";
-import { currentDate } from "./main.js";
 
 export const renderUsers = async () => {
     const users = await getData("users");
@@ -7,9 +6,11 @@ export const renderUsers = async () => {
     document.querySelector(".users-div-list").innerHTML = render;
 }
 renderUsers();
+
 export const renderPosts = async () => {
     const posts = await getData("posts");
-    const render = posts.data.map((post) => `      <li class="message">
+    const render = posts.data.map((post) => 
+      `<li class="message">
         <div class="head">
           <p>${post.sender}</p>
           <span>${post.time}</span>

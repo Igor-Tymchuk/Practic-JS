@@ -3,7 +3,7 @@ import { getData, addNewUser } from "./api.js";
 
 if (localStorage.getItem("user")) {
     const userData = JSON.parse(localStorage.getItem('user'));
-    document.querySelector(".welcome").textContent = `Hello, ${userData.name}`;
+    document.querySelector(".welcome").textContent = `Hello, ${userData.name}!`;
     document.querySelector('.reg-log').textContent = "Log Out"
     document.querySelector(".send-btn").removeAttribute("disabled");
     document.querySelector("#textarea").removeAttribute("disabled");
@@ -30,7 +30,6 @@ export const handleReg = async (event) => {
     const newUser = {
         name: nickname,
         password: password,
-        posts: 0,
     }
     addNewUser("users/", newUser)
         .then((response) => {
@@ -42,9 +41,7 @@ export const handleReg = async (event) => {
 }
 regForm.addEventListener("submit", handleReg);
 
-
 const logForm = document.querySelector(".login");
-
 const handleLog = async (event) => {
     event.preventDefault();
     const nickname = event.currentTarget.elements.nickname.value.trim();
@@ -56,7 +53,6 @@ const handleLog = async (event) => {
         const logUser = {
             name: user.name,
             password: password,
-            posts: user.posts,
         }
         localStorage.setItem('user', JSON.stringify(logUser));
         window.location.reload()
@@ -65,11 +61,11 @@ const handleLog = async (event) => {
 }
 logForm.addEventListener("submit", handleLog);
 
-  const togglePassword = document.querySelector("#toggle-password");
-  const passwordInput = document.querySelector("#password-login");
+const togglePassword = document.querySelector("#toggle-password");
+const passwordInput = document.querySelector("#password-login");
 
-  togglePassword.addEventListener("click", function () {
+togglePassword.addEventListener("click", function () {
     const type = passwordInput.getAttribute("type") === "password" ? "text" : "password";
     passwordInput.setAttribute("type", type);
     this.textContent = type === "password" ? "ShowPassword👁️" : "HidePassword🙈";
-  });
+});

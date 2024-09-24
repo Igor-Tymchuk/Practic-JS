@@ -11,6 +11,3 @@ export const addNewUser = async (way, newUser) => {
         console.error(err.toJSON())
     }
 }
-
-// export const postData = (way, data) => axios.post(`https://${API_KEY}.${URL}${way}`, data);
-
