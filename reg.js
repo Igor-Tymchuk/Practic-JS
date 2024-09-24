@@ -63,7 +63,7 @@ const handleLog = async (event) => {
     }
     else return iziError("Wrong password!");
 }
-
+logForm.addEventListener("submit", handleLog);
 
   const togglePassword = document.querySelector("#toggle-password");
   const passwordInput = document.querySelector("#password-login");
