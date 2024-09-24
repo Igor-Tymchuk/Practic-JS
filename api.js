@@ -15,3 +15,15 @@ export const addNewUser = async (way, newUser) => {
     console.error(err.toJSON());
   }
 };
+
+export const deleteData = async (way, id) => {
+  try {
+    const response = await axios.delete(
+      `https://${API_KEY}.${URL}${way}/${id}`,
+
+    );
+    return response.data;
+  } catch (err) {
+    console.error(err.toJSON());
+  }
+};
