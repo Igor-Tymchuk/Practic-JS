@@ -74,7 +74,7 @@ main {
   opacity: 0;
   pointer-events: none;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-  visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .reg-log-overlay {
   box-shadow: 10px 10px 20px 5px rgba(0, 0, 0, 0.5);
@@ -95,7 +95,7 @@ main {
   opacity: 0;
   pointer-events: none;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-  visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .list-dev {
@@ -171,7 +171,7 @@ footer.navigation {
   justify-content: center;
   flex-direction: row;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-  transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
 }
 .btn-style.time {
@@ -243,7 +243,7 @@ input:focus-within {
   border-radius: 5px;
   width: 50%;
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   align-items: center;
   margin: 0 10px;
 }
@@ -266,7 +266,7 @@ input:focus-within {
   background-color: #8082c9;
   outline: transparent;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-  background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .textarea:focus-within {
@@ -344,19 +344,20 @@ input:focus-within {
 .edit:hover {
   background-color: orangered;
 }
-.reg-user
-{ display: flex;
+.reg-user {
+  display: flex;
   align-items: center;
   justify-content: center;
   width: 90%;
   height: 35px;
   border-radius: 10px;
   border: dashed 1px #fcfcfc;
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .reg-user:hover {
   box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.5);
-  background-color:#47475e;
+  background-color: #47475e;
 }
 
 @media (max-width: 599px) {
@@ -372,7 +373,7 @@ input:focus-within {
     width: 100%;
     min-width: 320px;
   }
-  .chat{
+  .chat {
     width: 100%;
     margin: 0px;
   }
@@ -386,23 +387,24 @@ input:focus-within {
     padding: 8px 5px;
     margin: 2px;
   }
-  body, .btn-style {
+  body,
+  .btn-style {
     font-size: 14px;
   }
 }
-  [disabled] {
-    background-color: grey;
-    color: black;
-    border: solid 1px black;
-  }
-  [disabled]:hover {
-    background-color: black;
-    color: grey;
-    border: solid 1px grey;
-  }
+[disabled] {
+  background-color: grey;
+  color: black;
+  border: solid 1px black;
+}
+[disabled]:hover {
+  background-color: black;
+  color: grey;
+  border: solid 1px grey;
+}
 
-  .eye-password{
-    cursor: pointer;
-    color: grey;
-    font-size: small;
-  }
+.eye-password {
+  cursor: pointer;
+  color: grey;
+  font-size: small;
+}
