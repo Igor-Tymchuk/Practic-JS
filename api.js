@@ -6,7 +6,7 @@ export const getData = async (data) => await axios.get(`https://${API_KEY}.${URL
 export const addNewUser = async (way, newUser) => {
     try {
         const response = await axios.post(`https://${API_KEY}.${URL}${way}`, newUser)
-        return response.data
+        return response.data;
     } catch (err) {
         console.error(err.toJSON())
     }
