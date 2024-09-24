@@ -243,7 +243,9 @@ input:focus-within {
   border-radius: 5px;
   width: 50%;
   display: flex;
+  justify-content: flex-end;
   flex-direction: column-reverse;
+  
   align-items: center;
   margin: 0 10px;
 }
