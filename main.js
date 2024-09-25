@@ -60,7 +60,7 @@ export const currentDate = () => {
   const month = (now.getMonth() + 1).toString().padStart(2, "0");
   const year = now.getFullYear();
   document.querySelector(".time").textContent = `Time: ${hours}:${minutes}`;
-  return `${hours}:${minutes} (${day}:${month}:${year})`;
+  return `${hours}:${minutes} (${day}.${month}.${year})`;
 };
 currentDate();
 
