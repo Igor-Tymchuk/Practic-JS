@@ -1,6 +1,8 @@
-import { iziError } from "./izi.js";
+import { iziError, iziInfo } from "./izi.js";
 import { getData, addNewUser } from "./api.js";
+import { renderUsers } from "./render.js";
 
+const hasRegUser = () => {
 if (localStorage.getItem("user")) {
     const userData = JSON.parse(localStorage.getItem('user'));
     document.querySelector(".welcome").textContent = `Hello, ${userData.name}!`;
@@ -8,8 +10,10 @@ if (localStorage.getItem("user")) {
     document.querySelector(".send-btn").removeAttribute("disabled");
     document.querySelector("#textarea").removeAttribute("disabled");
     document.querySelector("#textarea").setAttribute("placeholder", "Input your message...");
+}}
+hasRegUser();
 
-}
+
 
 const regForm = document.querySelector(".register");
 export const handleReg = async (event) => {
@@ -33,9 +37,11 @@ export const handleReg = async (event) => {
     }
     addNewUser("users/", newUser)
         .then((response) => {
-            console.log("response:", response)
             localStorage.setItem('user', JSON.stringify(response));
-            window.location.reload()
+            renderUsers();
+            hasRegUser();
+            iziInfo("Register successful!");
+            document.querySelector(".reg-log-overlay").classList.remove("is-open");
         })
         .catch((error) => console.log(error));
 }
@@ -55,7 +61,9 @@ const handleLog = async (event) => {
             password: password,
         }
         localStorage.setItem('user', JSON.stringify(logUser));
-        window.location.reload()
+    hasRegUser();
+    document.querySelector(".reg-log-overlay").classList.remove("is-open");
+    iziInfo("Login successful!")
     }
     else return iziError("Wrong password!");
 }

@@ -21,3 +21,6 @@ export const renderPosts = async () => {
     document.querySelector(".chat").innerHTML = render;
 }
 renderPosts();
+const chatInterval = setInterval(() => {
+  renderPosts();
+}, 3000);

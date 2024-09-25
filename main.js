@@ -10,7 +10,12 @@ const regLogWindow = document.querySelector(".reg-log-overlay");
 const openRegWindow = () => {
   if (document.querySelector(".reg-log").textContent === "Log Out") {
     localStorage.removeItem("user");
-    window.location.reload();
+    document.querySelector(".welcome").textContent = `Hello, Anonymous!`;
+    document.querySelector('.reg-log').textContent = "Login"
+    document.querySelector(".send-btn").setAttribute("disabled", true);
+    document.querySelector("#textarea").setAttribute("disabled", true);
+    document.querySelector("#textarea").setAttribute("placeholder", "Need authorization to send messages...");
+    iziInfo("Logged out!")
     return;
   }
   regLogWindow.classList.toggle("is-open");
@@ -60,7 +65,7 @@ export const currentDate = () => {
 currentDate();
 
 import { getData, addNewUser, deleteData } from "./api.js";
-import { renderUsers } from "./render.js";
+import { renderPosts, renderUsers } from "./render.js";
 import { iziInfo } from "./izi.js";
 import { handleReg } from "./reg.js";
 
@@ -72,7 +77,6 @@ function sendPost(event) {
 
   const textAria = event.currentTarget.elements.textarea.value.trim();
   const userData = JSON.parse(localStorage.getItem("user"));
-  //   console.log(userData);
 
   const object = {
     time: currentDate(),
@@ -81,13 +85,13 @@ function sendPost(event) {
   };
 
   addNewUser("posts", object)
-    .then((response) => {
-      console.log("response:", response);
+  .then((response) => {
+  renderPosts();
+  sendBtn.reset();
+})
+.catch((error) => console.log(error));
 
-      window.location.reload();
-    })
-    .catch((error) => console.log(error));
-};
+}
 
 const chatList = document.querySelector('.chat');
 
@@ -95,12 +99,11 @@ function deletePost(event) {
   const messageId = event.target.id;
   if (!event.target.classList.contains('del')) return;
   deleteData('posts', messageId)
-    .then((response) => {
-      console.log("response:", response);
-
-      window.location.reload();
-    })
-    .catch((error) => console.log(error));
+  .then((response) => {
+    renderPosts();
+  })
+  .catch((error) => console.log(error));
+  renderPosts();
 };
 chatList.addEventListener('click', deletePost);
 
