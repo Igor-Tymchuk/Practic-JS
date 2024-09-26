@@ -19,6 +19,13 @@ export const renderPosts = async () => {
         <div class="control"><button type="button" class="edit">EDIT</button><button type="button" id="${post.id}" class="del">DELETE</button></div>
       </li>`).join("");
   document.querySelector(".chat").innerHTML = render;
+
+  const allMsgs = document.querySelectorAll(".message");
+  for (const msg of allMsgs) {
+    const senderName = msg.querySelector("p").textContent;
+    const userData = JSON.parse(localStorage.getItem('user'));
+    if (senderName !== userData.name) msg.querySelector(".control").classList.add("none");
+  }
 }
 renderPosts();
 const chatInterval = setInterval(() => {
