@@ -27,3 +27,13 @@ export const deleteData = async (way, id) => {
     console.error(err.toJSON());
   }
 };
+
+export const editData = async (way, id, newObj) => {
+  try {
+    const response = await axios.put(`https://${API_KEY}.${URL}${way}/${id}`, newObj);
+    console.log(response.data);
+    return response.data;
+  } catch (err) {
+    console.error(err.toJSON());
+  }
+}

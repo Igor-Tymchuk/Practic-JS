@@ -64,33 +64,44 @@ export const currentDate = () => {
 };
 currentDate();
 
-import { getData, addNewUser, deleteData } from "./api.js";
+import { getData, addNewUser, deleteData, editData } from "./api.js";
 import { renderPosts, renderUsers } from "./render.js";
 import { iziInfo } from "./izi.js";
 import { handleReg } from "./reg.js";
-
 const sendBtn = document.querySelector(".send");
 sendBtn.addEventListener("submit", sendPost);
+let msgObj = {};
+let msgId;
 
 function sendPost(event) {
   event.preventDefault();
-
+  if (document.querySelector(".send-btn").textContent === "Edit message") {
+    msgObj.text = document.querySelector("#textarea").value;
+    msgObj.time = `Edited: ${currentDate()}`;
+    console.log("msgObj:", msgObj)
+    editData('posts', msgId, msgObj)
+      .then((response) => {
+        renderPosts();
+        document.querySelector(".send-btn").textContent = "Send message";
+        document.querySelector("#textarea").value = "";
+        iziInfo("Message edited!");
+      })
+      .catch((error) => console.log(error));
+    return;
+  }
   const textAria = event.currentTarget.elements.textarea.value.trim();
   const userData = JSON.parse(localStorage.getItem("user"));
-
   const object = {
     time: currentDate(),
     text: textAria,
     sender: userData.name,
   };
-
   addNewUser("posts", object)
-  .then((response) => {
-  renderPosts();
-  sendBtn.reset();
-})
-.catch((error) => console.log(error));
-
+    .then((response) => {
+      renderPosts();
+      sendBtn.reset();
+    })
+    .catch((error) => console.log(error));
 }
 
 const chatList = document.querySelector('.chat');
@@ -99,11 +110,19 @@ function deletePost(event) {
   const messageId = event.target.id;
   if (!event.target.classList.contains('del')) return;
   deleteData('posts', messageId)
-  .then((response) => {
-    renderPosts();
-  })
-  .catch((error) => console.log(error));
+    .then((response) => {
+      renderPosts();
+    })
+    .catch((error) => console.log(error));
   renderPosts();
 };
 chatList.addEventListener('click', deletePost);
 
+async function editPost(event) {
+  if (!event.target.classList.contains('edit')) return;
+  msgId = event.target.nextElementSibling.id;
+  msgObj = { ...await getData(`posts/${msgId}`)}.data ;
+  document.querySelector("#textarea").value = msgObj.text;
+  document.querySelector(".send-btn").textContent = "Edit message";
+};
+chatList.addEventListener('click', editPost);

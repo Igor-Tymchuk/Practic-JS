@@ -294,6 +294,10 @@ input:focus-within {
   background-color: rgb(65, 78, 92);
 }
 
+.head span {
+  color: #9398a5;
+  font-size: 12px;
+}
 .head {
   display: flex;
   justify-content: space-between;

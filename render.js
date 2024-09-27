@@ -23,7 +23,7 @@ export const renderPosts = async () => {
   const allMsgs = document.querySelectorAll(".message");
   for (const msg of allMsgs) {
     const senderName = msg.querySelector("p").textContent;
-    const userData = JSON.parse(localStorage.getItem('user'));console.log(userData);
+    const userData = JSON.parse(localStorage.getItem('user'));
     if (senderName !== userData?.name || !userData) msg.querySelector(".control").classList.add("none");
   }
 }
