@@ -1,6 +1,6 @@
 import { iziError, iziInfo } from "./izi.js";
 import { getData, addNewUser } from "./api.js";
-import { renderUsers } from "./render.js";
+import { renderUsers, renderPosts } from "./render.js";
 
 const hasRegUser = () => {
 if (localStorage.getItem("user")) {
@@ -63,7 +63,8 @@ const handleLog = async (event) => {
         localStorage.setItem('user', JSON.stringify(logUser));
     hasRegUser();
     document.querySelector(".reg-log-overlay").classList.remove("is-open");
-    iziInfo("Login successful!")
+    iziInfo("Login successful!");
+    renderPosts();
     }
     else return iziError("Wrong password!");
 }

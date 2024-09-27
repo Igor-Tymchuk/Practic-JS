@@ -1,3 +1,8 @@
+import { getData, addNewUser, deleteData, editData } from "./api.js";
+import { renderPosts, renderUsers } from "./render.js";
+import { iziInfo } from "./izi.js";
+import { handleReg } from "./reg.js";
+
 const menuBtn = document.querySelector(".menu");
 const menuList = document.querySelector(".modal-overlay");
 const openMenu = () => {
@@ -15,7 +20,8 @@ const openRegWindow = () => {
     document.querySelector(".send-btn").setAttribute("disabled", true);
     document.querySelector("#textarea").setAttribute("disabled", true);
     document.querySelector("#textarea").setAttribute("placeholder", "Need authorization to send messages...");
-    iziInfo("Logged out!")
+    iziInfo("Logged out!");
+    renderPosts();
     return;
   }
   regLogWindow.classList.toggle("is-open");
@@ -64,10 +70,6 @@ export const currentDate = () => {
 };
 currentDate();
 
-import { getData, addNewUser, deleteData, editData } from "./api.js";
-import { renderPosts, renderUsers } from "./render.js";
-import { iziInfo } from "./izi.js";
-import { handleReg } from "./reg.js";
 const sendBtn = document.querySelector(".send");
 sendBtn.addEventListener("submit", sendPost);
 let msgObj = {};
